@@ -16,10 +16,10 @@
         </div>
     </header>
     <Separator size="md"/>
-    <h4>I'm a Computer Science student from Paris, France.</h4>
-    <Separator size="ti"/>
-    <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art.</p>
-    <Separator size="mega"/>
+    <h4>Welcome! I'm a Computer Science student from Paris, France.</h4>
+    <Separator size="mi"/>
+    <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. Let me show you.</p>
+    <Separator size="xl"/>
 
     <Button on:click={onNext} size="lg" label="Discover my world" rightEmoji="🌍" accent/>
     <Separator size="sm"/>
@@ -75,6 +75,10 @@
     }
 
     @media (max-width: 700px) {
+        header div {
+            align-items: center;
+        }
+
         .links {
             justify-content: center;
         }
