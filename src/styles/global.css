@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: var(--ctext);
+	font-family: var(--font);
+}
+
+h1, h2, h3, h4, h5 {
+	width: max-content;
+}
+
+h1 {
+	font-size: var(--mega);
+	font-weight: 600;
+}
+
+h2 {
+	font-size: var(--xl);
+	font-weight: 600;
+}
+
+h3 {
+	font-size: var(--lg);
+	font-weight: 600;
+}
+
+h4 {
+	font-size: var(--md);
+	font-weight: 600;
+}
+
+p {
+	font-size: var(--sm);
+}

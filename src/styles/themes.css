@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* 'Questrial', sans-serif */
+
+/* TEST FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800&family=Inter:wght@200;400;600;800&family=Jost:wght@200;300;400;500;600;700&family=Open+Sans+Condensed:wght@300;700&family=Playfair+Display:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/*
+font-family: 'Fira Mono', monospace;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+/*
+font-family: 'Cutive Mono', monospace;
+*/
+
+.main-theme {
+    --font: 'Inter', sans-serif;
+
+    --br: 0.2;
+    --ssmth: 0px;
+    --sopac: 1;
+    --bthic: 1;
+    --soffy: 1;
+    --soffx: -1;
+    --trans: 1;
+
+    --global-size: 55px;
+
+    --pi-fact: 0.2;
+    --mi-fact: 0.3;
+    --sm-fact: 0.4;
+    --md-fact: 0.56;
+    --lg-fact: 0.75;
+    --xl-fact: 1;
+    --xxl-fact: 1.5;
+    --mega-fact: 1.75;
+    --giga-fact: 2.5;
+}
+
+.theme-compute {
+    --mi: calc(var(--mi-fact) * var(--global-size));
+    --sm: calc(var(--sm-fact) * var(--global-size));
+    --md: calc(var(--md-fact) * var(--global-size));
+    --lg: calc(var(--lg-fact) * var(--global-size));
+    --xl: calc(var(--xl-fact) * var(--global-size));
+    --xxl: calc(var(--xxl-fact) * var(--global-size));
+    --mega: calc(var(--mega-fact) * var(--global-size));
+    --giga: calc(var(--giga-fact) * var(--global-size));
+
+    --padd: 0.4em;
+    --marg: 0.4em;
+    --bord: calc(var(--bthic) * 0.075em);
+    --brad: calc(var(--br) * 0.25em);
+    --shad-offx: calc(var(--soffx) * 0.2em);
+    --shad-offy: calc(var(--soffy) * 0.2em);
+    --shad-offx-large: calc(var(--soffx) * 0.3em); 
+    --shad-offy-large: calc(var(--soffy) * 0.3em);
+}
+
+@media (max-width: 1200px) {
+    .main-theme {
+        --global-size: 45px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main-theme {
+        --global-size: 32.5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-theme {
+        --global-size: 32.5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-theme {
+        --global-size: 24px;
+    }
+}
+
+.light-theme {
+    --cbg: white;
+    --cfaint: white;
+    --ccontrast: black;
+    --ctext: black;
+    --caccent: rgb(32, 29, 44);
+    --caccent-faint: rgb(219, 255, 248);
+    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(32, 29, 44, var(--sopac));
+}
+
+.hacker-theme {
+    --font: 'Cutive Mono', monospace;
+    --br: 2;
+    --ssmth: 30px;
+    --sopac: 0.5;
+    --bthic: 0;
+
+    --cbg: rgb(2, 13, 19);
+    --cfaint: rgb(2, 13, 19);
+    --ccontrast: rgb(89, 189, 94);
+    --ctext: rgb(89, 189, 94);
+    --caccent: rgb(216, 174, 174);
+    --caccent-faint: rgb(0, 0, 0);
+    --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
+    --caccent-shadow: rgba(216, 174, 174, var(--sopac));
+}
