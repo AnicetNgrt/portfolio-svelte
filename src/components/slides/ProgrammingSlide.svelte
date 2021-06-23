@@ -44,7 +44,7 @@
         />
         <Card
             title="🎲 Games projects"
-            abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many finished projects published.'
+            abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
         />
     </div>
 </Slide>
