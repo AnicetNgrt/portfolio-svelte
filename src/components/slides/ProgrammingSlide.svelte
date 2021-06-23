@@ -40,7 +40,7 @@
         </div>
         <Card
             title="🌌 Web projects"
-            abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker and. I love to solve difficult problems, share my knowledge and build beautiful UI.'
+            abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
         />
         <Card
             title="🎲 Games projects"
