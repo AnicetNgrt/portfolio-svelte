@@ -4,7 +4,10 @@
     import Box from '$components/atoms/Box.svelte';
     import Slide from '$components/molecules/Slide.svelte';
 
-    export let onNext: () => void;
+    export let gotoSlide: (slide) => void;
+    export const prevSlide = {};
+
+    const nextSlide = 'map';
 </script>
 
 <Slide> 
@@ -18,10 +21,10 @@
     <Separator size="md"/>
     <h4>Welcome! I'm a Computer Science student from Paris, France.</h4>
     <Separator size="mi"/>
-    <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. Let me show you.</p>
+    <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. This website is to showcase all of that to you.</p>
     <Separator size="xl"/>
 
-    <Button on:click={onNext} size="lg" label="Discover my world" rightEmoji="🌍" accent/>
+    <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent/>
     <Separator size="sm"/>
     <p>∷ or ∷</p>
     <Separator size="sm"/>
@@ -62,16 +65,16 @@
 
     #pp {
         display: none;
-        font-size: var(--lg);
+        font-size: var(--md);
         width: 6em;
         height: 6em;
         object-fit: cover;
-        border-radius: 8rem;
-        padding: var(--mi);
+        border-radius: 6em;
+        padding: 0.1em;
+        background-color: var(--caccent-faint);
         margin: var(--marg);
         margin-left: 0;
         border: solid var(--bord) var(--ccontrast);
-        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast);
     }
 
     @media (max-width: 700px) {

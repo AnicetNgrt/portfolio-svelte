@@ -6,7 +6,23 @@
 	font-family: var(--font);
 }
 
+body {
+	min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: #fff;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #333;
+    }
+}
+
 h1, h2, h3, h4, h5 {
+	font-family: var(--title-font);
 	width: max-content;
 	max-width: 100%;
 }
@@ -31,6 +47,13 @@ h4 {
 	font-weight: 600;
 }
 
+h5 {
+	font-size: var(--sm);
+	font-weight: 600;
+	max-width: 80ch;
+}
+
 p {
 	font-size: var(--sm);
+	max-width: 80ch;
 }

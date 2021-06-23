@@ -13,13 +13,14 @@ font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 /*
-font-family: 'Cutive Mono', monospace;
+font-family: 'Tangerine', cursive;
 */
 
 .main-theme {
     --font: 'Inter', sans-serif;
+    --title-font: 'Inter', sans-serif;
 
     --br: 0.2;
     --ssmth: 0px;
@@ -43,6 +44,7 @@ font-family: 'Cutive Mono', monospace;
 }
 
 .theme-compute {
+    --pi: calc(var(--pi-fact) * var(--global-size));
     --mi: calc(var(--mi-fact) * var(--global-size));
     --sm: calc(var(--sm-fact) * var(--global-size));
     --md: calc(var(--md-fact) * var(--global-size));
@@ -91,6 +93,23 @@ font-family: 'Cutive Mono', monospace;
     --cfaint: white;
     --ccontrast: black;
     --ctext: black;
+    --caccent: rgb(100, 85, 151);
+    --caccent-faint: rgb(219, 255, 248);
+    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(100, 85, 151, var(--sopac));
+}
+
+.editor-theme {
+    --font: 'Jost', sans-serif;
+    --br: 3;
+    --ssmth: 10px;
+    --sopac: 0.1;
+    --bthic: 0;
+
+    --cbg: white;
+    --cfaint: white;
+    --ccontrast: black;
+    --ctext: black;
     --caccent: rgb(32, 29, 44);
     --caccent-faint: rgb(219, 255, 248);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
@@ -112,4 +131,25 @@ font-family: 'Cutive Mono', monospace;
     --caccent-faint: rgb(0, 0, 0);
     --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
     --caccent-shadow: rgba(216, 174, 174, var(--sopac));
+}
+
+.programming-slides-theme {
+    --font: 'Fira Sans', sans-serif;
+    --title-font: 'Fira Sans', sans-serif;
+
+    --br: 1;
+    --ssmth: 20px;
+    --sopac: 0.3;
+    --bthic: 0;
+    --soffy: 1;
+    --soffx: -1;
+
+    --cbg: rgb(37, 45, 83);
+    --cfaint: rgb(48, 57, 100);
+    --ccontrast: rgb(43, 111, 116);
+    --ctext: rgb(184, 222, 231);
+    --caccent: rgb(48, 92, 133);
+    --caccent-faint: rgb(36, 76, 114);
+    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(0, 0, 0, var(--sopac));
 }

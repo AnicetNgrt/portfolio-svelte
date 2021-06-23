@@ -1,70 +1,60 @@
 <script lang="ts">
     import MainSlide from "$components/slides/MainSlide.svelte";
-    import SummarySlide from "$components/slides/SummarySlide.svelte";
+    import ProfessionalXpSlide from "$components/slides/ProfessionalXpSlide.svelte";
+    import ProgrammingSlide from "$components/slides/ProgrammingSlide.svelte";
+    import MapSlide from "$components/slides/MapSlide.svelte";
+    import ThemeEditor from "$components/slides/ThemeEditor.svelte";
+    import { initNavigation, updateNavigation } from "$lib/navigation";
+    import { onMount } from "svelte";
     
+    let availableSlides = {
+        main: { slide: MainSlide, props: {} },
+        professionalXp: { slide: ProfessionalXpSlide, props: {} },
+        programming: { slide: ProgrammingSlide, props: {} },
+        map: { slide: MapSlide, props: {} },
+        themeEditor: { slide: ThemeEditor, props: {} }
+    }
+
     let switching = false;
 
-    const defaultSlidesProps = {
-        onNext: nextSlide,
-        onPrev: previousSlide
-    }
-
-    const slides = [
-        { slide: MainSlide, props: {} },
-        { slide: SummarySlide, props: {} },
-    ]
-
-    for(let i = 0; i < slides.length; i++) {
-        slides[i].props = { ...defaultSlidesProps, ...slides[i].props }
-    }
-
     let slidesContainer: svelte.JSX.Element;
-    let slideIndex = 0;
-    let shownSlides = [slides[slideIndex]];
+    let shownSlides = [];
+    let prevSlide = null;
 
-    function hasNextSlide() {
-        return slideIndex + 1 < slides.length;
+    onMount(() => {
+        const savedNav = initNavigation();
+        shownSlides = [ nameToSlide(savedNav.slideName) ];
+        prevSlide = savedNav.prevSlide;
+    });
+
+    function nameToSlide(name) {
+        return { ...availableSlides[name], name };
     }
 
-    function hasPreviousSlide() {
-        return slideIndex - 1 >= 0;
-    }
+    function gotoSlide(slideName) {
+        const slide = nameToSlide(slideName);
 
-    function nextSlide() {
-        if (!hasNextSlide || switching) return;
         switching = true;
-        slideIndex += 1;
-        shownSlides = [...shownSlides, slides[slideIndex]];
+        shownSlides = [...shownSlides, slide];
         setTimeout(() => {
-            moveToSlide(shownSlides.length - 1);
-        }, 200);
-    }
+            slidesContainer.children[1].scrollIntoView({
+                behavior: 'smooth'
+            });
+            setTimeout(() => {
+                prevSlide = shownSlides[0].name;
+                updateNavigation({ prevSlide, slideName });
+                shownSlides = [slide];
 
-    function previousSlide() {
-        if (!hasPreviousSlide || switching) return;
-        switching = true;
-        slideIndex -= 1;
-        shownSlides = [...shownSlides, slides[slideIndex]];
-        setTimeout(() => {
-            moveToSlide(shownSlides.length - 1);
+                switching = false;
+            }, 500);
         }, 200);
-    }
-
-    function moveToSlide(i) {
-        slidesContainer.children[i].scrollIntoView({
-            behavior: 'smooth'
-        });
-        setTimeout(() => {
-            shownSlides = [slides[slideIndex]];
-            switching = false;
-        }, 500);
     }
 </script>
 
 <div bind:this={slidesContainer}>
     {#each shownSlides as { slide, props }}
         <div>
-            <svelte:component this={slide} {...props}></svelte:component>
+            <svelte:component this={slide} {gotoSlide} {prevSlide} {...props}></svelte:component>
         </div>
     {/each}
 </div>

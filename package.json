@@ -28,5 +28,8 @@
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@codersrank/work-experience": "^0.9.8"
+  }
 }

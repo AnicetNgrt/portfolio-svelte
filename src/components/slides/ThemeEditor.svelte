@@ -5,8 +5,8 @@
     import Slide from '$components/molecules/Slide.svelte';
     import Button from "$components/atoms/Button.svelte";
 
-    export let onPrev: () => void;
-    export const onNext = () => {};
+    export let gotoSlide: (slide) => void;
+    export let prevSlide;
 
     const fonts = {
         'Questrial': "'Questrial', sans-serif",
@@ -19,17 +19,17 @@
         'Roboto': "'Roboto', sans-serif"
     }
 
-    let brAmount = 1;
-    let bThickness = 1;
-    let sBlur = 0;
-    let sOpac = 1;
+    let brAmount = 3;
+    let bThickness = 0;
+    let sBlur = 10;
+    let sOpac = 0.1;
     let sOffX = 0;
     let sOffY = 1;
-    let font = "'Questrial', sans-serif";
+    let font = "'Jost', sans-serif";
 </script>
 
-<Slide>
-    <Button size="mi" on:click={onPrev} leftEmoji="<--" label="Back" round/>
+<Slide themeOverride="editor-theme">
+    <Button size="mi" on:click={() => gotoSlide(prevSlide)} leftEmoji="←" label="Previous" round/>
     <Separator size="sm"/>
     <h3>Theme Editor</h3>
     <Separator size="mi"/>

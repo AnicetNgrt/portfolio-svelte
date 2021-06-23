@@ -108,7 +108,7 @@
     }
 
     .button p {
-        color: var(--ccontrast);
+        color: var(--ctext);
         height: max-content;
         max-height: 100%;
         font-size: var(--size);
