@@ -43,27 +43,6 @@ font-family: 'Tangerine', cursive;
     --giga-fact: 2.5;
 }
 
-.theme-compute {
-    --pi: calc(var(--pi-fact) * var(--global-size));
-    --mi: calc(var(--mi-fact) * var(--global-size));
-    --sm: calc(var(--sm-fact) * var(--global-size));
-    --md: calc(var(--md-fact) * var(--global-size));
-    --lg: calc(var(--lg-fact) * var(--global-size));
-    --xl: calc(var(--xl-fact) * var(--global-size));
-    --xxl: calc(var(--xxl-fact) * var(--global-size));
-    --mega: calc(var(--mega-fact) * var(--global-size));
-    --giga: calc(var(--giga-fact) * var(--global-size));
-
-    --padd: 0.4em;
-    --marg: 0.4em;
-    --bord: calc(var(--bthic) * 0.075rem);
-    --brad: calc(var(--br) * 0.25em);
-    --shad-offx: calc(var(--soffx) * 0.2em);
-    --shad-offy: calc(var(--soffy) * 0.2em);
-    --shad-offx-large: calc(var(--soffx) * 0.3em); 
-    --shad-offy-large: calc(var(--soffy) * 0.3em);
-}
-
 @media (max-width: 3900px) {
     .main-theme {
         --global-size: 128px;
@@ -140,6 +119,27 @@ font-family: 'Tangerine', cursive;
     .main-theme {
         --global-size: 18px;
     }
+}
+
+.theme-compute {
+    --pi: calc(var(--pi-fact) * var(--global-size));
+    --mi: calc(var(--mi-fact) * var(--global-size));
+    --sm: calc(var(--sm-fact) * var(--global-size));
+    --md: calc(var(--md-fact) * var(--global-size));
+    --lg: calc(var(--lg-fact) * var(--global-size));
+    --xl: calc(var(--xl-fact) * var(--global-size));
+    --xxl: calc(var(--xxl-fact) * var(--global-size));
+    --mega: calc(var(--mega-fact) * var(--global-size));
+    --giga: calc(var(--giga-fact) * var(--global-size));
+
+    --padd: 0.4em;
+    --marg: 0.4em;
+    --bord: calc(var(--bthic) * calc(0.025 * var(--global-size)));
+    --brad: calc(var(--br) * 0.25em);
+    --shad-offx: calc(var(--soffx) * 0.2em);
+    --shad-offy: calc(var(--soffy) * 0.2em);
+    --shad-offx-large: calc(var(--soffx) * 0.3em); 
+    --shad-offy-large: calc(var(--soffy) * 0.3em);
 }
 
 .light-theme {

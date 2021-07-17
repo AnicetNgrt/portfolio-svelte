@@ -49,12 +49,12 @@
             </div>
         </div>
         <Card 
-            title="📐 Graphic design"
+            title="📐 Design & Art"
             abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
         />
         <Card 
             title="🎮 Game Creation"
-            abstract="Doing a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
+            abstract="My main hobby. Trying a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
         />
     </div>
 </Slide>
