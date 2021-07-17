@@ -25,8 +25,8 @@
         <Box size="sm" margin>
             <p>
                 Programming is my main productive activity.
-                I've been doing programming on my spare time since 2016.
-                I've also been studying Computer Science at the University since 2019.
+                I'm programming on my spare time since 2016.
+                Owner of a CS degree (DUT BAC+2) at <i>Université de Paris</i>, I'm expecting to graduate as a CS Engineer at <i>INSA Lyon</i> in 2024.
             </p>
         </Box>
         <div class="col">
