@@ -10,11 +10,12 @@
 </script>
 
 <Slide themeOverride="programming-slides-theme">
-    <Box size="sm" margin>
+    <Box size="lg" margin>
         <Button 
             size="mi" on:click={() => gotoSlide('map')} 
             leftEmoji="←" 
             label="Back to La Carte"
+            accent
         />
         <Separator size="md"/>
         <h2>Programming & IT</h2>
@@ -51,13 +52,13 @@
 
 <style>
     .cards {
-        width: 64.9ch;
+        width: 69ch;
         max-width: 100%;
     }
 
     @media (max-width: 170ch) {
         .cards {
-            width: 32ch;
+            width: 35ch;
         }
     }
 
@@ -68,7 +69,7 @@
     }
 
     p {
-        width: 43ch;
+        width: 46ch;
         margin: 0.25em;
         text-align: left;
     }

@@ -10,13 +10,11 @@
 </script>
 
 <Slide themeOverride="summary-slide-theme">
-    <Box size="sm" margin>
+    <Box size="lg" margin>
         <Button 
             size="mi" on:click={() => gotoSlide('main')} 
             leftEmoji="←" 
             label="Home" 
-            round
-            accent
         />
         <h1>La carte <span style="font-weight: normal;">🗺</span></h1>
     </Box>
@@ -66,29 +64,29 @@
         --font: 'Roboto', sans-serif;
         --title-font: 'Jost', sans-serif;
 
-        --br: 2;
-        --ssmth: 0px;
-        --sopac: 0.2;
-        --bthic: 1.4;
+        --br: 0.4;
+        --ssmth: 4px;
+        --sopac: 0.3;
+        --bthic: 2;
 
         --cbg: rgb(94, 133, 218);
-        --cfaint: rgb(86, 173, 93);
-        --ccontrast: rgb(35, 41, 41);
-        --ctext: rgb(247, 248, 201);
-        --caccent: rgb(9, 83, 59);
-        --caccent-faint: rgb(211, 171, 84);
-        --ccontrast-shadow: rgba(77, 47, 14, var(--sopac));
-        --caccent-shadow: rgba(32, 29, 44, var(--sopac));
+        --cfaint: rgb(94, 133, 218);
+        --ccontrast: rgb(60, 44, 151);
+        --ctext: rgb(255, 255, 255);
+        --caccent: rgb(60, 44, 151);
+        --caccent-faint: rgb(83, 102, 207);
+        --ccontrast-shadow: rgba(60, 44, 151, var(--sopac));
+        --caccent-shadow: rgba(60, 44, 151, var(--sopac));
     }
 
     .cards {
-        width: 64.9ch;
+        width: 69ch;
         max-width: 100%;
     }
 
     @media (max-width: 170ch) {
         .cards {
-            width: 32ch;
+            width: 35ch;
         }
     }
 
@@ -96,10 +94,5 @@
         .cards {
             justify-content: center;
         }
-    }
-
-    h4 {
-        margin-left: var(--sm);
-        margin-top: 0.25em;
     }
 </style>

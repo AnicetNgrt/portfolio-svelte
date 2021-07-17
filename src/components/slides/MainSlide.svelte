@@ -24,7 +24,7 @@
     <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. This website is to showcase all of that to you.</p>
     <Separator size="xl"/>
 
-    <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent/>
+    <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent round/>
     <Separator size="sm"/>
     <p>∷ or ∷</p>
     <Separator size="sm"/>

@@ -25,7 +25,7 @@ font-family: 'Tangerine', cursive;
     --br: 0.2;
     --ssmth: 0px;
     --sopac: 1;
-    --bthic: 1;
+    --bthic: 2;
     --soffy: 1;
     --soffx: -1;
     --trans: 1;
@@ -56,12 +56,54 @@ font-family: 'Tangerine', cursive;
 
     --padd: 0.4em;
     --marg: 0.4em;
-    --bord: calc(var(--bthic) * 0.075em);
+    --bord: calc(var(--bthic) * 0.075rem);
     --brad: calc(var(--br) * 0.25em);
     --shad-offx: calc(var(--soffx) * 0.2em);
     --shad-offy: calc(var(--soffy) * 0.2em);
     --shad-offx-large: calc(var(--soffx) * 0.3em); 
     --shad-offy-large: calc(var(--soffy) * 0.3em);
+}
+
+@media (max-width: 3900px) {
+    .main-theme {
+        --global-size: 128px;
+    }
+}
+
+@media (max-width: 3400px) {
+    .main-theme {
+        --global-size: 120px;
+    }
+}
+
+@media (max-width: 3000px) {
+    .main-theme {
+        --global-size: 100px;
+    }
+}
+
+@media (max-width: 2500px) {
+    .main-theme {
+        --global-size: 75px;
+    }
+}
+
+@media (max-width: 2000px) {
+    .main-theme {
+        --global-size: 58px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .main-theme {
+        --global-size: 54px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .main-theme {
+        --global-size: 48px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -72,7 +114,7 @@ font-family: 'Tangerine', cursive;
 
 @media (max-width: 800px) {
     .main-theme {
-        --global-size: 32.5px;
+        --global-size: 38.5px;
     }
 }
 
@@ -84,7 +126,19 @@ font-family: 'Tangerine', cursive;
 
 @media (max-width: 400px) {
     .main-theme {
-        --global-size: 24px;
+        --global-size: 26px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-theme {
+        --global-size: 21px;
+    }
+}
+
+@media (max-width: 250px) {
+    .main-theme {
+        --global-size: 18px;
     }
 }
 
@@ -134,22 +188,20 @@ font-family: 'Tangerine', cursive;
 }
 
 .programming-slides-theme {
-    --font: 'Fira Sans', sans-serif;
-    --title-font: 'Fira Sans', sans-serif;
+    --font: 'Roboto', sans-serif;
+    --title-font: 'Roboto', sans-serif;
 
-    --br: 1;
-    --ssmth: 20px;
+    --br: 0;
+    --ssmth: 10px;
     --sopac: 0.3;
-    --bthic: 0;
-    --soffy: 1;
-    --soffx: -1;
+    --bthic: 1;
 
-    --cbg: rgb(37, 45, 83);
-    --cfaint: rgb(48, 57, 100);
-    --ccontrast: rgb(43, 111, 116);
-    --ctext: rgb(184, 222, 231);
-    --caccent: rgb(48, 92, 133);
-    --caccent-faint: rgb(36, 76, 114);
-    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
-    --caccent-shadow: rgba(0, 0, 0, var(--sopac));
+    --cbg: rgb(2, 13, 19);
+    --cfaint: rgb(2, 13, 19);
+    --ccontrast: rgb(89, 189, 94);
+    --ctext: rgb(89, 189, 94);
+    --caccent: rgb(122, 0, 0);
+    --caccent-faint: rgb(0, 0, 0);
+    --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
+    --caccent-shadow: rgba(122, 0, 0, var(--sopac));
 }

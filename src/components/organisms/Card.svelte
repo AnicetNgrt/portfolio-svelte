@@ -33,7 +33,7 @@
     .card {
         text-decoration: none;
         justify-content: space-between;
-        width: 31ch;
+        width: 33ch;
         height: 15ch;
         margin: var(--pi);
         padding: 0;
@@ -49,7 +49,7 @@
     .slim.card {
         font-size: var(--sm);
         height: 3.8ch;
-        width: 43.1ch;
+        width: 46.1ch;
     }
 
     .slim.card h3, .slim.card h4 {
@@ -60,7 +60,7 @@
 
     .small.card {
         font-size: var(--sm);
-        width: 20.6ch;
+        width: 22.2ch;
         height: 9.5ch;
     }
 
