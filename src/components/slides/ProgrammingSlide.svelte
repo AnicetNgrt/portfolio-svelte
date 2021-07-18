@@ -42,11 +42,11 @@
                 />
         </div>
         <Card
-            title="🌌 Web dev showreel" wip disabled
+            title="🌌Web dev showreel" wip disabled
             abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
         />
         <Card
-            title="🎲 Game dev showreel" wip disabled
+            title="🎲Gamedev showreel" wip disabled
             abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
         />
     </div>
