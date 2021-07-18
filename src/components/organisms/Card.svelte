@@ -19,7 +19,7 @@
     <Box size={small || slim ? "sm" : "xl"} margin>
         <div class="col">
             {#if !small}
-                <h3>{title}</h3>
+                <h4>{title}</h4>
                 {#if abstract.length > 0}
                     <Separator size="mi"/>
                 {/if}
@@ -84,8 +84,12 @@
         width: 33ch;
     }
 
-    .slim.card h3, .slim.card h4 {
+    .slim.card h4 {
         font-size: var(--md);
+    }
+
+    .slim.card h4, .small.card h4 {
+        padding-left: 0.3em;
     }
 
     .small.card {
@@ -123,9 +127,8 @@
 
     .card:hover .link, .card:focus .link, .card:active .link {
         transition: all calc(var(--trans) * 0.1s) ease-out;
-        border-left: solid var(--bord) var(--ccontrast);
-        background-color: var(--caccent);
-        color: var(--cfaint);
+        background-color: var(--caccent-faint);
+        color: var(--caccent);
     }
 
     .card:active {

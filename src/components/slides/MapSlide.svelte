@@ -71,7 +71,7 @@
         --cfaint: rgb(255, 218, 148);
         --ccontrast: rgb(31, 32, 46);
         --ctext: rgb(31, 32, 46);
-        --caccent: rgb(88, 73, 64);
+        --caccent: rgb(216, 141, 91);
         --caccent-faint: rgb(255, 218, 148);
         --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
         --caccent-shadow: rgba(59, 52, 48, var(--sopac));
