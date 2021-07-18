@@ -34,52 +34,76 @@
     <h3>Theme Editor</h3>
     <Separator size="mi"/>
 
-    <div class="row">
-        <div class="col">
-            <Slider label="Border Radius" min={0} max={5} step={0.1} bind:value={brAmount}/>
-            <Slider label="Border Thickness" min={0} max={10} step={0.1} bind:value={bThickness}/>
-            <Slider label="Shadow Blur" min={0} max={20} step={1} bind:value={sBlur}/>
-            <Slider label="Shadow Opacity" min={0} max={1} step={0.05} bind:value={sOpac}/>
-            <Slider label="Shadow Offset Y" min={-8} max={8} step={0.1} bind:value={sOffY}/>
-            <Slider label="Shadow Offset X" min={-8} max={8} step={0.1} bind:value={sOffX}/>
-        </div>
-        <Separator size="md"/>
-        <div class="col wrap" id="fonts">
-            {#each Object.keys(fonts) as key}
-            <div class="row">
-                <Separator size="sm"/>
-                <input type=radio bind:group={font} value={fonts[key]}>
-                <Separator size="sm"/>
-                <p style="font-family: {fonts[key]}">{key}</p>
+    <div class="editor-body">
+        <div class="row wrap">
+            <div class="col">
+                <Slider label="Border Radius" min={0} max={5} step={0.1} bind:value={brAmount}/>
+                <Slider label="Border Thickness" min={0} max={10} step={0.1} bind:value={bThickness}/>
+                <Slider label="Shadow Blur" min={0} max={20} step={1} bind:value={sBlur}/>
+                <Slider label="Shadow Opacity" min={0} max={1} step={0.05} bind:value={sOpac}/>
+                <Slider label="Shadow Offset Y" min={-8} max={8} step={0.1} bind:value={sOffY}/>
+                <Slider label="Shadow Offset X" min={-8} max={8} step={0.1} bind:value={sOffX}/>
             </div>
-            {/each}
+            <Separator size="md"/>
+            <div class="col wrap" id="fonts">
+                {#each Object.keys(fonts) as key}
+                <div class="row">
+                    <Separator size="sm"/>
+                    <input type=radio bind:group={font} value={fonts[key]}>
+                    <Separator size="sm"/>
+                    <p style="font-family: {fonts[key]}">{key}</p>
+                </div>
+                {/each}
+            </div>
+        </div>
+    
+        <div style="
+        --br: {brAmount};
+        --ssmth: {sBlur}px;
+        --bthic: {bThickness};
+        --soffx: {sOffX};
+        --soffy: {sOffY};
+        --font: {font};
+        --sopac: {sOpac};
+        "
+        class="col light-theme theme-compute"
+        >
+            <Separator size="md"/>
+            <SizeBenchmark size="mi"/>
+            <Separator size="mi"/>
+            <SizeBenchmark size="sm"/>
+            <Separator size="sm"/>
+            <SizeBenchmark size="md"/>
+            <Separator size="md"/>
+            <SizeBenchmark size="lg"/>
         </div>
     </div>
-
-    <div style="
-    --br: {brAmount};
-    --ssmth: {sBlur}px;
-    --bthic: {bThickness};
-    --soffx: {sOffX};
-    --soffy: {sOffY};
-    --font: {font};
-    --sopac: {sOpac};
-    "
-    class="col light-theme theme-compute"
-    >
+    <div class="mobile-disclaimer col center-x">
+        <h1>Oopsie 📱</h1>
         <Separator size="md"/>
-        <SizeBenchmark size="mi"/>
-        <Separator size="mi"/>
-        <SizeBenchmark size="sm"/>
-        <Separator size="sm"/>
-        <SizeBenchmark size="md"/>
-        <Separator size="md"/>
-        <SizeBenchmark size="lg"/>
+        <p>
+            Sorry, the theme editor is only available on large horizontal screens for now.
+        </p>
     </div>
 </Slide>
 
 <style>
     #fonts {
         max-height: 12rem;
+    }
+
+    .mobile-disclaimer {
+        margin-top: 2rem;
+        display: none;
+    }
+
+    @media (max-width: 720px) {
+        .editor-body {
+            display: none;
+        }
+
+        .mobile-disclaimer {
+            display: flex;
+        }
     }
 </style>

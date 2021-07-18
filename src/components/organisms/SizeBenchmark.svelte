@@ -6,7 +6,7 @@
     export let size: string = "md";
 </script>
 
-<div class="row">
+<div class="row wrap">
     <Box {size} margin>
         <Input value="" label="Username" {size}/>
     </Box>
