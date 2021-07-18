@@ -63,15 +63,15 @@
         left: 79.5%;
         transform: rotate(45deg);
         font-size: 0.7em;
-        background-color: var(--caccent);
-        color: var(--ctext);
+        background-color: var(--ctext);
+        color: var(--cfaint);
         padding-bottom: 0.1em;
         padding-left: 3em;
         padding-right: 3em;
     }
 
     .slim .wip {
-        left: 55%;
+        left: 57%;
     }
 
     .card.disabled {
@@ -125,7 +125,7 @@
         transition: all calc(var(--trans) * 0.1s) ease-out;
         border-left: solid var(--bord) var(--ccontrast);
         background-color: var(--caccent);
-        color: var(--ctext);
+        color: var(--cfaint);
     }
 
     .card:active {

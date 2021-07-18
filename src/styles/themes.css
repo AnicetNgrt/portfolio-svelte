@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-/* 'Questrial', sans-serif */
-
 /* TEST FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800&family=Inter:wght@200;400;600;800&family=Jost:wght@200;300;400;500;600;700&family=Open+Sans+Condensed:wght@300;700&family=Playfair+Display:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /*
@@ -13,14 +10,13 @@ font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-/*
-font-family: 'Tangerine', cursive;
-*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 .main-theme {
     --font: 'Inter', sans-serif;
     --title-font: 'Inter', sans-serif;
+    --title-weight: bold;
 
     --br: 0.2;
     --ssmth: 0px;
@@ -184,19 +180,22 @@ font-family: 'Tangerine', cursive;
 
 .programming-slides-theme {
     --font: 'Roboto', sans-serif;
-    --title-font: 'Roboto', sans-serif;
+    --title-font: 'Jetbrains Mono', sans-serif;
+    --title-weight: 500;
 
     --br: 0;
-    --ssmth: 0px;
-    --sopac: 0.3;
-    --bthic: 1;
+    --ssmth: 20px;
+    --sopac: 0.5;
+    --bthic: 0.1;
+    --soffx: 0;
+    --soffy: 0.5;
 
-    --cbg: rgb(4, 17, 36);
-    --cfaint: rgb(4, 17, 36);
-    --ccontrast: rgb(204, 204, 204);
-    --ctext: rgb(204, 204, 204);
-    --caccent: rgb(0, 134, 94);
-    --caccent-faint: rgb(4, 17, 36);
-    --ccontrast-shadow: rgba(204, 204, 204, var(--sopac));
-    --caccent-shadow: rgba(0, 197, 122, var(--sopac));
+    --cbg: rgb(0, 0, 0);
+    --cfaint: rgb(0, 0, 0);
+    --ccontrast: rgb(94, 255, 129);
+    --ctext: rgb(188, 202, 188);
+    --caccent: rgb(94, 255, 129);
+    --caccent-faint: rgb(0, 0, 0);
+    --ccontrast-shadow: rgba(94, 255, 129, var(--sopac));
+    --caccent-shadow: rgba(94, 255, 129, var(--sopac));
 }

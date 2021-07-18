@@ -37,16 +37,16 @@
                     href="https://github.com/AnicetNgrt"
                 />
                 <Card
-                    title="💾 Play the games I've made"
+                    title="💾 Play my games"
                     href="https://anicetngrt.itch.io/"
                 />
         </div>
         <Card
-            title="🌌 Web dev portfolio" wip disabled
+            title="🌌 Web dev showreel" wip disabled
             abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
         />
         <Card
-            title="🎲 Game dev portfolio" wip disabled
+            title="🎲 Game dev showreel" wip disabled
             abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
         />
     </div>
