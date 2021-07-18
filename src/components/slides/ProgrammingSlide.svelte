@@ -33,7 +33,7 @@
         </Box>
         <div class="col">
                 <Card
-                    title="🐙 Browse my open-source projects"
+                    title="🐙 Browse my repositories"
                     href="https://github.com/AnicetNgrt"
                 />
                 <Card
@@ -42,11 +42,11 @@
                 />
         </div>
         <Card
-            title="🌌 Web projects"
+            title="🌌 Web dev portfolio" wip disabled
             abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
         />
         <Card
-            title="🎲 Games projects"
+            title="🎲 Game dev portfolio" wip disabled
             abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
         />
     </div>

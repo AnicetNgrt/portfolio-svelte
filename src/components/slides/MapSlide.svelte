@@ -13,7 +13,8 @@
         <Button 
             size="mi" on:click={() => gotoSlide('main')} 
             leftEmoji="←" 
-            label="Home" 
+            label="Home"
+            round
         />
         <h1>La carte <span style="font-weight: normal;">🗺</span></h1>
     </Box>
@@ -40,17 +41,17 @@
                     on:click={() => gotoSlide('themeEditor')}
                 />
                 <Card 
-                    small
+                    small wip disabled
                     title="Gallery"
                 />
             </div>
         </div>
         <Card 
-            title="Design & Art"
+            title="Design & Art" wip disabled
             abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
         />
         <Card 
-            title="Game Creation"
+            title="Game Creation" wip disabled
             abstract="My main hobby. Trying a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
         />
     </div>
@@ -61,16 +62,16 @@
         --font: 'Roboto', sans-serif;
         --title-font: 'Playfair Display', serif;
 
-        --br: 0.4;
-        --ssmth: 0px;
-        --sopac: 1;
-        --bthic: 1;
+        --br: 0;
+        --ssmth: 10px;
+        --sopac: 0.05;
+        --bthic: 0.1;
 
-        --cbg: rgb(255, 218, 148);
-        --cfaint: rgb(240, 192, 120);
-        --ccontrast: rgb(59, 52, 48);
-        --ctext: rgb(59, 52, 48);
-        --caccent: rgb(223, 157, 96);
+        --cbg: rgb(240, 192, 120);
+        --cfaint: rgb(255, 218, 148);
+        --ccontrast: rgb(31, 32, 46);
+        --ctext: rgb(31, 32, 46);
+        --caccent: rgb(240, 192, 120);
         --caccent-faint: rgb(255, 218, 148);
         --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
         --caccent-shadow: rgba(59, 52, 48, var(--sopac));

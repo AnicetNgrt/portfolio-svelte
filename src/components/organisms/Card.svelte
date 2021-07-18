@@ -6,11 +6,16 @@
     export let title: string;
     export let abstract: string = "";
     export let href: string = "";
+    export let disabled: boolean = false;
+    export let wip: boolean = false;
 
     let slim = abstract.length <= 0;
 </script>
 
-<a class="card row" {href} class:small class:slim on:click>
+<a class="card row" {href} class:small class:disabled class:slim on:click>
+    {#if wip}
+        <span class="wip">soon</span>
+    {/if}
     <Box size={small || slim ? "sm" : "xl"} margin>
         <div class="col">
             {#if !small}
@@ -26,13 +31,17 @@
             {/if}
         </div>
     </Box>
-    <div class="link col center-y">
-        ⇾
+    <div class="link col center-y" class:disabled>
+        {#if !disabled}
+            ⇾
+        {/if}
     </div>
 </a>
 
 <style>
     .card {
+        overflow: hidden;
+        position: relative;
         text-decoration: none;
         justify-content: space-between;
         width: 33ch;
@@ -48,13 +57,30 @@
         transition: all calc(var(--trans) * 0.2s) ease-in-out;
     }
 
+    .wip {
+        position: absolute;
+        top: 0.6em;
+        left: 79.5%;
+        transform: rotate(45deg);
+        font-size: 0.7em;
+        background-color: var(--caccent);
+        color: var(--ctext);
+        padding-bottom: 0.1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .card.disabled {
+        pointer-events: none;
+        filter: opacity(0.5);
+    }
+
     .slim.card {
         font-size: var(--md);
         width: 33ch;
     }
 
     .slim.card h3, .slim.card h4 {
-        font-weight: normal;
         font-size: var(--md);
     }
 
@@ -75,12 +101,13 @@
         padding: 0 var(--padd);
         transition: all calc(var(--trans) * 0.1s) ease-out;
         border-left: solid var(--bord) transparent;
-        border-top-right-radius: calc(var(--brad) * 0.8);
-        border-bottom-right-radius: calc(var(--brad) * 0.8);
+        border-top-right-radius: calc(var(--brad) * 1);
+        border-bottom-right-radius: calc(var(--brad) * 1);
     }
 
-    .small .link, .slim .link {
-        font-size: var(--sm);
+    .link.disabled {
+        background-color: var(--cfaint);
+        width: 1.8em;
     }
 
     .card:hover, .card:focus {

@@ -191,12 +191,12 @@ font-family: 'Tangerine', cursive;
     --sopac: 0.3;
     --bthic: 1;
 
-    --cbg: rgb(0, 0, 0);
-    --cfaint: rgb(0, 0, 0);
-    --ccontrast: rgb(89, 189, 94);
-    --ctext: rgb(89, 189, 94);
-    --caccent: rgb(165, 0, 0);
+    --cbg: rgb(4, 17, 36);
+    --cfaint: rgb(4, 17, 36);
+    --ccontrast: rgb(204, 204, 204);
+    --ctext: rgb(204, 204, 204);
+    --caccent: rgb(0, 134, 94);
     --caccent-faint: rgb(4, 17, 36);
-    --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
-    --caccent-shadow: rgba(165, 0, 0, var(--sopac));
+    --ccontrast-shadow: rgba(204, 204, 204, var(--sopac));
+    --caccent-shadow: rgba(0, 197, 122, var(--sopac));
 }
