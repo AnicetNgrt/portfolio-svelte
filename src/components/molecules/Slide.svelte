@@ -1,5 +1,12 @@
 <script lang="ts">
-    export let themeOverride: string = "";
+    import { onMount } from 'svelte';
+
+    export let themeOverride: string = '';
+    export let url:string = '/';
+
+    onMount(() => {
+        window.history.pushState({}, '', url);
+    });
 </script>
 
 <div class="{themeOverride} theme-compute col" id="root">

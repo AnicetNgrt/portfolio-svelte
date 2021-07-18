@@ -8,7 +8,7 @@
     export let prevSlide;
 </script>
 
-<Slide themeOverride="programming-slides-theme">
+<Slide url="professional-xp" themeOverride="programming-slides-theme">
     <Box size="sm" margin>
         <Button 
             size="mi" on:click={() => gotoSlide(prevSlide)} 

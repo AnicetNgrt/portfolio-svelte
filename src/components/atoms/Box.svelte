@@ -10,6 +10,10 @@
 <style>
     div {
         font-size: var(--size);
+        max-width: 100%;
+        max-height: 100%;
+        width: max-content;
+        height: max-content;
     }
 
     .margin {

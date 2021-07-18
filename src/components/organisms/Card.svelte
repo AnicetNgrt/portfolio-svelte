@@ -33,7 +33,7 @@
     </Box>
     <div class="link col center-y" class:disabled>
         {#if !disabled}
-            ⇾
+            ⋗
         {/if}
     </div>
 </a>
@@ -107,6 +107,7 @@
         background-color: var(--caccent-faint);
         text-decoration: none;
         padding: 0 var(--padd);
+        padding-bottom: 0.15em;
         transition: all calc(var(--trans) * 0.1s) ease-out;
         border-left: solid var(--bord) transparent;
         border-top-right-radius: calc(var(--brad) * 1);

@@ -7,8 +7,10 @@
     import { initNavigation, updateNavigation } from "$lib/navigation";
     import { onMount } from "svelte";
     import { tweened } from "svelte/motion";
-    import { cubicInOut, cubicOut } from 'svelte/easing';
+    import { cubicInOut } from 'svelte/easing';
     
+    export let slideOverride: string = null;
+
     let availableSlides = {
         main: { slide: MainSlide, props: {} },
         professionalXp: { slide: ProfessionalXpSlide, props: {} },
@@ -28,7 +30,7 @@
     let y = 0;
 
     onMount(() => {
-        const savedNav = initNavigation();
+        const savedNav = slideOverride ? { slideName: slideOverride, prevSlide: 'map' } : initNavigation();
         shownSlides = [ nameToSlide(savedNav.slideName) ];
         prevSlide = savedNav.prevSlide;
     });

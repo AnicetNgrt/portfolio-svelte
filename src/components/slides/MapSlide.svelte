@@ -26,31 +26,31 @@
         />
         <div class="col">
             <div class="col">
-                <Card 
+                <Card
                     title="Professional Experience"
                     on:click={() => gotoSlide('professionalXp')}
                 />
-                <Card 
+                <Card
                     title="Education & certificates"
                 />
             </div>
             <div class="row">
-                <Card 
+                <Card
                     small
                     title="Themer"
                     on:click={() => gotoSlide('themeEditor')}
                 />
-                <Card 
+                <Card
                     small wip disabled
                     title="Gallery"
                 />
             </div>
         </div>
-        <Card 
+        <Card
             title="Design & Art" wip disabled
             abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
         />
-        <Card 
+        <Card
             title="Game Creation" wip disabled
             abstract="My main hobby. Trying a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
         />
