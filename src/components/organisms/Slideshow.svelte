@@ -8,12 +8,14 @@
     import { onMount } from "svelte";
     import { tweened } from "svelte/motion";
     import { cubicInOut } from 'svelte/easing';
+import Education from "../slides/Education.svelte";
     
     export let slideOverride: string = null;
 
     let availableSlides = {
         main: { slide: MainSlide, props: {} },
         professionalXp: { slide: ProfessionalXpSlide, props: {} },
+        education: { slide: Education, props: {} },
         programming: { slide: ProgrammingSlide, props: {} },
         map: { slide: MapSlide, props: {} },
         themeEditor: { slide: ThemeEditor, props: {} }

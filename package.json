@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@codersrank/work-experience": "^0.9.8"
+    "@codersrank/work-experience": "^0.9.8",
+    "svelte-icons": "^2.1.0"
   }
 }

@@ -2,8 +2,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+div, a, button, input, p, span, h1, h2, h3, h4, h5 {
 	color: var(--ctext);
 	font-family: var(--font);
+}
+
+svg {
+	color: inherit;
 }
 
 body {
@@ -26,6 +33,19 @@ h1, h2, h3, h4, h5 {
 	width: max-content;
 	max-width: 100%;
 	font-weight: var(--title-weight);
+}
+
+h1.hightlighted,
+h2.hightlighted,
+h3.hightlighted,
+h4.hightlighted,
+h5.hightlighted,
+p.hightlighted,
+span.hightlighted {
+	background-color: var(--caccent-faint);
+	padding-left: var(--padd);
+	padding-right: var(--padd);
+	border-radius: var(--brad);
 }
 
 h1 {

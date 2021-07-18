@@ -6,6 +6,7 @@
     export let rightEmoji: string = "";
     export let round: boolean = false;
     export let accent: boolean = false;
+    export let relExternal: boolean = false;
 
     const link = href.length > 0;
     const left = label.length > 0 || rightEmoji.length > 0;
@@ -17,7 +18,7 @@
 <button 
     class="button row center-x center-y" 
     style="--size: var(--{size})" 
-    class:round class:accent class:onechar 
+    class:round class:accent class:onechar
     on:click
 >
     {#if leftEmoji.length > 0}
@@ -38,6 +39,7 @@
     style="--size: var(--{size})" 
     class:round class:accent class:onechar 
     href={href}
+    rel={relExternal ? "external" : "internal"}
 >
     {#if leftEmoji.length > 0}
         <p class="emoji" class:left>{leftEmoji}</p>

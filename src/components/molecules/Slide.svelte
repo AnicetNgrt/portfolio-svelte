@@ -70,7 +70,6 @@
         #content {
             justify-content: start;
             align-items: center;
-            text-align: center;
         }
     }
 </style>

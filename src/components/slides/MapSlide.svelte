@@ -32,6 +32,7 @@
                 />
                 <Card
                     title="Education & certificates"
+                    on:click={() => gotoSlide('education')}
                 />
             </div>
             <div class="row">
