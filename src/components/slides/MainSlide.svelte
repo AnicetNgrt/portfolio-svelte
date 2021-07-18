@@ -21,7 +21,7 @@
     <Separator size="md"/>
     <h4>Welcome! I'm a Computer Science student from Paris, France.</h4>
     <Separator size="mi"/>
-    <p>Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. This website is to showcase all of that to you.</p>
+    <p id="aboutme">Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. This website is to showcase all of that to you.</p>
     <Separator size="xl"/>
 
     <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent round/>

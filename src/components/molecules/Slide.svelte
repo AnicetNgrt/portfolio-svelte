@@ -52,6 +52,7 @@
         width: max-content;
         max-width: 100%;
         height: max-content;
+        padding: var(--md);
     }
 
     @media (max-width: 700px) {
