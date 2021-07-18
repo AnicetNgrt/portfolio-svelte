@@ -70,6 +70,10 @@
         padding-right: 3em;
     }
 
+    .slim .wip {
+        left: 55%;
+    }
+
     .card.disabled {
         pointer-events: none;
         filter: opacity(0.5);
