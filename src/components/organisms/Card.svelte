@@ -6,10 +6,12 @@
     export let title: string;
     export let abstract: string = "";
     export let href: string = "";
+
+    let slim = abstract.length <= 0;
 </script>
 
-<a class="card row" {href} class:small class:slim={abstract.length <= 0} on:click>
-    <Box size={small ? "md" : "xl"} margin>
+<a class="card row" {href} class:small class:slim on:click>
+    <Box size={small || slim ? "sm" : "xl"} margin>
         <div class="col">
             {#if !small}
                 <h3>{title}</h3>
@@ -34,7 +36,7 @@
         text-decoration: none;
         justify-content: space-between;
         width: 33ch;
-        height: 15ch;
+        height: max-content;
         margin: var(--pi);
         padding: 0;
         background-color: var(--cfaint);
@@ -47,25 +49,18 @@
     }
 
     .slim.card {
-        font-size: var(--sm);
-        height: 3.8ch;
-        width: 46.1ch;
+        font-size: var(--md);
+        width: 33ch;
     }
 
     .slim.card h3, .slim.card h4 {
         font-weight: normal;
-        font-size: var(--sm);
-        margin-top: -0.7em;
+        font-size: var(--md);
     }
 
     .small.card {
-        font-size: var(--sm);
-        width: 22.2ch;
-        height: 9.5ch;
-    }
-
-    .slim.small.card {
-        height: 3.45ch;
+        font-size: var(--md);
+        width: 15.9ch;
     }
 
     p.small {

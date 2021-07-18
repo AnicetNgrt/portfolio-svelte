@@ -105,7 +105,19 @@ font-family: 'Tangerine', cursive;
 
 @media (max-width: 400px) {
     .main-theme {
-        --global-size: 26px;
+        --global-size: 30px;
+    }
+}
+
+@media (max-width: 370px) {
+    .main-theme {
+        --global-size: 27px;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-theme {
+        --global-size: 25px;
     }
 }
 
@@ -143,14 +155,14 @@ font-family: 'Tangerine', cursive;
 }
 
 .light-theme {
-    --cbg: white;
+    --cbg: rgb(255, 255, 255);
     --cfaint: white;
     --ccontrast: black;
     --ctext: black;
-    --caccent: rgb(100, 85, 151);
-    --caccent-faint: rgb(219, 255, 248);
+    --caccent: rgb(0, 0, 0);
+    --caccent-faint: rgb(208, 255, 169);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
-    --caccent-shadow: rgba(100, 85, 151, var(--sopac));
+    --caccent-shadow: rgba(0, 0, 0, var(--sopac));
 }
 
 .editor-theme {
@@ -170,23 +182,6 @@ font-family: 'Tangerine', cursive;
     --caccent-shadow: rgba(32, 29, 44, var(--sopac));
 }
 
-.hacker-theme {
-    --font: 'Cutive Mono', monospace;
-    --br: 2;
-    --ssmth: 30px;
-    --sopac: 0.5;
-    --bthic: 0;
-
-    --cbg: rgb(2, 13, 19);
-    --cfaint: rgb(2, 13, 19);
-    --ccontrast: rgb(89, 189, 94);
-    --ctext: rgb(89, 189, 94);
-    --caccent: rgb(216, 174, 174);
-    --caccent-faint: rgb(0, 0, 0);
-    --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
-    --caccent-shadow: rgba(216, 174, 174, var(--sopac));
-}
-
 .programming-slides-theme {
     --font: 'Roboto', sans-serif;
     --title-font: 'Roboto', sans-serif;
@@ -196,12 +191,12 @@ font-family: 'Tangerine', cursive;
     --sopac: 0.3;
     --bthic: 1;
 
-    --cbg: rgb(2, 13, 19);
-    --cfaint: rgb(2, 13, 19);
+    --cbg: rgb(0, 0, 0);
+    --cfaint: rgb(0, 0, 0);
     --ccontrast: rgb(89, 189, 94);
     --ctext: rgb(89, 189, 94);
-    --caccent: rgb(122, 0, 0);
-    --caccent-faint: rgb(0, 0, 0);
+    --caccent: rgb(165, 0, 0);
+    --caccent-faint: rgb(4, 17, 36);
     --ccontrast-shadow: rgba(89, 189, 94, var(--sopac));
-    --caccent-shadow: rgba(122, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(165, 0, 0, var(--sopac));
 }
