@@ -19,7 +19,7 @@
         width: 100vw;
         max-width: 100vw;
         min-height: 100vh;
-        height: max-content;
+        height: 100vh;
     }
 
     #header {
@@ -37,17 +37,21 @@
         position: relative;
         font-size: var(--md);
         min-height: calc(100vh - calc(2 * var(--sm)));
-        height: max-content;
+        height: 100%;
         width: calc(100vw - calc(2 * var(--sm)));
         max-width: 100%;
         padding: var(--sm) var(--lg);
         margin: var(--sm);
         border: solid var(--bord) var(--ccontrast);
+        overflow: auto;
     }
 
     #content {
+        position: absolute;
+        top: 1em;
         width: max-content;
         max-width: 100%;
+        height: max-content;
     }
 
     @media (max-width: 700px) {

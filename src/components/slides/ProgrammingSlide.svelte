@@ -26,6 +26,8 @@
             <p>
                 Programming is my main productive activity.
                 I'm programming on my spare time since 2016.
+            </p>
+            <p>
                 Owner of a CS degree (DUT BAC+2) at <i>Université de Paris</i>, I'm expecting to graduate as a CS Engineer at <i>INSA Lyon</i> in 2024.
             </p>
         </Box>
