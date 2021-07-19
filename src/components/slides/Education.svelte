@@ -24,7 +24,7 @@
                 round
             />
             <Separator size="sm"/>
-            <h4>📚 Education & certificates</h4>
+            <h4>📚 Education</h4>
         </div>
     </Box>
     <Separator size="lg"/>
@@ -46,7 +46,7 @@
             <Separator size="xxl"/>
             <div class="col">
                 <div class="row">
-                    <h3 class="hightlighted">🎓 DUT Informatique (Two year CS degree)</h3>
+                    <h3 class="hightlighted">🎓 DUT Informatique (Two years CS degree)</h3>
                 </div>
                 <Separator size="sm"/>
                 <div class="job-description">
@@ -84,19 +84,7 @@
         max-width: 70ch;
     }
 
-    .body ul {
-        margin-left: var(--sm);
-    }
-
     .job-description {
         margin-left: var(--mi);
-    }
-
-    .icon {
-        color: var(--ctext);
-        font-size: var(--lg);
-        width: 0.8em;
-        height: 0.8em;
-        margin: 0.05em;
     }
 </style>

@@ -31,14 +31,14 @@
                     on:click={() => gotoSlide('professionalXp')}
                 />
                 <Card
-                    title="Education & certificates"
+                    title="Education"
                     on:click={() => gotoSlide('education')}
                 />
             </div>
             <div class="row">
                 <Card
                     small
-                    title="Themer"
+                    title="Theme Editor"
                     on:click={() => gotoSlide('themeEditor')}
                 />
                 <Card
