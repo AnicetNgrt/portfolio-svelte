@@ -5,27 +5,27 @@
     import Separator from '$components/atoms/Separator.svelte';
 
     export let gotoSlide: (slide) => void;
-    export let prevSlide;
+    export const prevSlide = {};
 </script>
 
 <Slide url="professional-xp">
-    <Box size="sm" margin>
+    <Box size="lg" margin>
         <div class="col">
             <Button 
-                size="mi" on:click={() => gotoSlide(prevSlide)} 
+                size="mi" on:click={() => gotoSlide('map')} 
                 leftEmoji="←" 
                 label="Back to La Carte"
                 round
             />
             <Separator size="sm"/>
-            <h4>👔 Professional experience</h4>
+            <h2>👔 Professional experience</h2>
         </div>
     </Box>
     <Separator size="lg"/>
     <Box size="sm" margin>
         <div class="col">
             <div class="col">
-                <h3 class="hightlighted">Fullstack web development</h3>
+                <h3 class="highlighted">Fullstack web development</h3>
                 <Separator size="sm"/>
                 <div class="job-description">
                     <h4>Coddity</h4>
@@ -63,7 +63,7 @@
             <Separator size="xxl"/>
             <div class="col">
                 <div class="row">
-                    <h3 class="hightlighted">CS students mentoring</h3>
+                    <h3 class="highlighted">CS students mentoring</h3>
                 </div>
                 <Separator size="sm"/>
                 <div class="job-description">

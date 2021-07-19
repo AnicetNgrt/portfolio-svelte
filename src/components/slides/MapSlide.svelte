@@ -20,7 +20,7 @@
     </Box>
     <div class="col center-x wrap cards">
         <Card 
-            title="Programming & IT"
+            title="Programming & CompSci."
             abstract="Student with professional experience. Proficient with both web backend and frontend. Most proficient with React, Svelte, Elixir, JS, TS, Java, Docker & Python."
             on:click={() => gotoSlide('programming')}
         />
@@ -59,25 +59,6 @@
 </Slide>
 
 <style>
-    :global(.summary-slide-theme)  {
-        --font: 'Roboto', sans-serif;
-        --title-font: 'Playfair Display', serif;
-
-        --br: 0;
-        --ssmth: 10px;
-        --sopac: 0.05;
-        --bthic: 0.1;
-
-        --cbg: rgb(240, 192, 120);
-        --cfaint: rgb(255, 218, 148);
-        --ccontrast: rgb(31, 32, 46);
-        --ctext: rgb(31, 32, 46);
-        --caccent: rgb(216, 141, 91);
-        --caccent-faint: rgb(255, 218, 148);
-        --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
-        --caccent-shadow: rgba(59, 52, 48, var(--sopac));
-    }
-
     .cards {
         height: 30ch;
         max-height: 100%;

@@ -10,34 +10,44 @@
 </script>
 
 <div class="{themeOverride} theme-compute col" id="root">
-    <div class="col center-y center-x" id="frame">
-        <div class="row" id="header">
-            <p>This is a header text</p>
-        </div>
-        <div class="col center-y" id="content">
+    <h1 id="siteName">anicetnougaret.fr</h1>
+    <div class="col center-x" id="frame">
+        <div class="col" id="content">
             <slot/>
         </div>
     </div>
 </div>
 
 <style>
+
+    #siteName {
+        position: absolute;
+        font-weight: normal;
+        width: max-content;
+        height: max-content;
+        font-size: 1vw;
+        top: calc(100% - 2.5vw);
+        left: calc(100% - 9.5vw);
+        padding: 0.5vw 0.7vw;
+        padding-bottom: 0.7vw;
+        padding-right: 1.2vw;
+        z-index: 1;
+        transform-origin: 0%;
+        color: var(--ccontrast);
+        background-color: var(--cbg);
+        border: solid var(--bord) var(--ccontrast);
+        border-bottom: none;
+        border-right: none;
+    }
+
     #root {
+        position: relative;
         background-color: var(--cbg);
         width: 100vw;
         max-width: 100vw;
         min-height: 100vh;
         height: 100vh;
-    }
-
-    #header {
-        display: none;
-        position: absolute;
-        top: 0em;
-        left: 0em;
-        width: 100%;
-        background-color: var(--caccent-faint);
-        border-bottom: solid var(--bord) var(--ccontrast);
-        padding: var(--padd) var(--mi);
+        overflow: hidden;
     }
 
     #frame {
@@ -47,7 +57,7 @@
         height: 100%;
         width: calc(100vw - calc(2 * var(--sm)));
         max-width: 100%;
-        padding: var(--sm) var(--lg);
+        padding: 0 var(--lg);
         margin: var(--sm);
         border: solid var(--bord) var(--ccontrast);
         overflow: auto;
@@ -55,11 +65,11 @@
 
     #content {
         position: absolute;
-        top: 1em;
+        top: 0em;
         width: max-content;
         max-width: 100%;
         height: max-content;
-        padding: 0 var(--md);
+        padding: var(--mi) var(--md);
     }
 
     @media (max-width: 700px) {
@@ -70,6 +80,16 @@
         #content {
             justify-content: start;
             align-items: center;
+            padding: 0 var(--pi);
+        }
+
+        #siteName {
+            font-size: 0.5em;
+            top: calc(100% - 2.5em);
+            left: calc(100% - 9.5em);
+            padding: 0.5em 0.7em;
+            padding-bottom: 0.7em;
+            padding-right: 1.2em;
         }
     }
 </style>

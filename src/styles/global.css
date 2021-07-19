@@ -35,17 +35,17 @@ h1, h2, h3, h4, h5 {
 	font-weight: var(--title-weight);
 }
 
-h1.hightlighted,
-h2.hightlighted,
-h3.hightlighted,
-h4.hightlighted,
-h5.hightlighted,
-p.hightlighted,
-span.hightlighted {
+h1.highlighted,
+h2.highlighted,
+h3.highlighted,
+h4.highlighted,
+h5.highlighted,
+p.highlighted,
+span.highlighted {
 	background-color: var(--caccent-faint);
 	padding-left: var(--padd);
 	padding-right: var(--padd);
-	border-radius: var(--brad);
+	border-radius: calc(0.33 * var(--brad));
 }
 
 h1 {
@@ -72,4 +72,11 @@ h5 {
 p {
 	font-size: var(--sm);
 	max-width: 80ch;
+}
+
+.illustration {
+	max-width: 100%;
+	border: solid var(--bord) var(--ccontrast);
+	border-radius: var(--brad);
+	box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
 }

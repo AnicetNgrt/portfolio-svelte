@@ -180,22 +180,41 @@ font-family: 'Roboto', sans-serif;
 
 .programming-slides-theme {
     --font: 'Roboto', sans-serif;
-    --title-font: 'Jetbrains Mono', sans-serif;
+    --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
 
-    --br: 0;
-    --ssmth: 15px;
-    --sopac: 0.5;
-    --bthic: 0.1;
+    --br: 2;
+    --ssmth: 0px;
+    --sopac: 1;
+    --bthic: 2;
     --soffx: 0;
-    --soffy: 0.5;
+    --soffy: 1.2;
 
-    --cbg: rgb(0, 0, 0);
-    --cfaint: rgb(0, 0, 0);
-    --ccontrast: rgb(94, 255, 129);
-    --ctext: rgb(188, 202, 188);
-    --caccent: rgb(94, 255, 129);
-    --caccent-faint: rgb(0, 0, 0);
-    --ccontrast-shadow: rgba(94, 255, 129, var(--sopac));
-    --caccent-shadow: rgba(94, 255, 129, var(--sopac));
+    --cbg: rgb(29, 32, 33);
+    --cfaint: rgb(40, 40, 40);
+    --ccontrast: rgb(13, 14, 15);
+    --ctext: rgb(168, 153, 132);
+    --caccent: rgb(215, 153, 33);
+    --caccent-faint: rgb(50, 48, 47);
+    --ccontrast-shadow: rgba(13, 14, 15, var(--sopac));
+    --caccent-shadow: rgba(13, 14, 15, var(--sopac));
+}
+
+.summary-slide-theme  {
+    --font: 'Roboto', sans-serif;
+    --title-font: 'Playfair Display', serif;
+
+    --br: 0;
+    --ssmth: 10px;
+    --sopac: 0.05;
+    --bthic: 0.1;
+
+    --cbg: rgb(240, 192, 120);
+    --cfaint: rgb(255, 218, 148);
+    --ccontrast: rgb(31, 32, 46);
+    --ctext: rgb(31, 32, 46);
+    --caccent: rgb(216, 141, 91);
+    --caccent-faint: rgb(255, 218, 148);
+    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(59, 52, 48, var(--sopac));
 }

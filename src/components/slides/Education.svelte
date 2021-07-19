@@ -3,28 +3,22 @@
     import Button from '$components/atoms/Button.svelte';
     import Slide from '$components/molecules/Slide.svelte';
     import Separator from '$components/atoms/Separator.svelte';
-    import DiGit from 'svelte-icons/di/DiGit.svelte';
-    import DiNodejsSmall from 'svelte-icons/di/DiNodejsSmall.svelte';
-    import DiReact from 'svelte-icons/di/DiReact.svelte';
-    import SvelteIcon from '../atoms/SvelteIcon.svelte';
-    import DiMysql from 'svelte-icons/di/DiMysql.svelte';
-    import DiLinux from 'svelte-icons/di/DiLinux.svelte';
 
     export let gotoSlide: (slide) => void;
-    export let prevSlide;
+    export const prevSlide = {};
 </script>
 
 <Slide url="education">
-    <Box size="sm" margin>
+    <Box size="lg" margin>
         <div class="col">
             <Button 
-                size="mi" on:click={() => gotoSlide(prevSlide)} 
+                size="mi" on:click={() => gotoSlide('map')} 
                 leftEmoji="←" 
-                label="Previous"
+                label="Back to La Carte"
                 round
             />
             <Separator size="sm"/>
-            <h4>📚 Education</h4>
+            <h2>📚 Education</h2>
         </div>
     </Box>
     <Separator size="lg"/>
@@ -34,7 +28,7 @@
                 <div class="col">
                     <p><i>Currently attending</i></p>
                     <Separator size="pi"/>
-                    <h3 class="hightlighted">🏹 Engineering degree in Computer Science</h3>
+                    <h3 class="highlighted">🏹 Engineering degree in Computer Science</h3>
                 </div>
                 <Separator size="sm"/>
                 <div class="job-description">
@@ -46,7 +40,7 @@
             <Separator size="xxl"/>
             <div class="col">
                 <div class="row">
-                    <h3 class="hightlighted">🎓 DUT Informatique (Two years CS degree)</h3>
+                    <h3 class="highlighted">🎓 DUT Informatique (Two years CS degree)</h3>
                 </div>
                 <Separator size="sm"/>
                 <div class="job-description">
@@ -58,7 +52,7 @@
                         <p>Generalist Computer Science degree with a 3 months final internship in the industry.</p>
                         <p>Teachings such as DB management, architecture, low-level programming, web development and project management.</p>
                         <Separator size="md"/>
-                        <h5 class="hightlighted">Final project: </h5>
+                        <h5 class="highlighted">Final project: </h5>
                         <Separator size="pi"/>
                         <Box size="sm" margin>
                             <p><b>Synchronized message queues system written in Elixir.</b> Teamed up with 6 other students over the course of 9 weeks part time.

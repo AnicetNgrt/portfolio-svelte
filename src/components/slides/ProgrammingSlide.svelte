@@ -15,39 +15,41 @@
             size="mi" on:click={() => gotoSlide('map')} 
             leftEmoji="←" 
             label="Back to La Carte"
-            accent
         />
         <Separator size="md"/>
-        <h2>Programming & IT</h2>
+        <h2>Programming & Computer Science</h2>
+        <Separator size="pi"/>
+        <p>
+            Programming is my main productive activity.
+            I'm programming on my spare time since 2016.
+        </p>
     </Box>
-    <Separator size="md"/>
+    <Separator size="sm"/>
     <div class="row center-x wrap cards">
-        <Box size="sm" margin>
-            <p>
-                Programming is my main productive activity.
-                I'm programming on my spare time since 2016.
-            </p>
-            <p>
-                Owner of a CS degree (DUT BAC+2) at <i>Université de Paris</i>, I'm expecting to graduate as a CS Engineer at <i>INSA Lyon</i> in 2024.
-            </p>
-        </Box>
-        <div class="col">
-                <Card
-                    title="🐙 Browse my repositories"
-                    href="https://github.com/AnicetNgrt"
-                />
-                <Card
-                    title="💾 Play my games"
-                    href="https://anicetngrt.itch.io/"
-                />
-        </div>
         <Card
-            title="🌌 Web dev showreel" wip disabled
+            title="🌌 Fullstack dev portfolio"
             abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
+            on:click={() => gotoSlide('webdevShowreel')}
         />
         <Card
             title="🎲 Gamedev showreel" wip disabled
             abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
+        />
+        <Card
+            title="👔 Professional Experience"
+            on:click={() => gotoSlide('professionalXp')}
+        />
+        <Card
+            title="🎓 Education"
+            on:click={() => gotoSlide('education')}
+        />
+        <Card
+            title="🐙 Browse my repositories"
+            href="https://github.com/AnicetNgrt"
+        />
+        <Card
+            title="💾 Play my games"
+            href="https://anicetngrt.itch.io/"
         />
     </div>
 </Slide>
@@ -71,7 +73,8 @@
     }
 
     p {
-        width: 46ch;
+        width: 75ch;
+        max-width: 100%;
         margin: 0.25em;
         text-align: left;
     }

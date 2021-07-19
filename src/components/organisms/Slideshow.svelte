@@ -9,6 +9,7 @@
     import { tweened } from "svelte/motion";
     import { cubicInOut } from 'svelte/easing';
 import Education from "../slides/Education.svelte";
+import WebDevShowreel from "../slides/WebDevShowreel.svelte";
     
     export let slideOverride: string = null;
 
@@ -18,7 +19,8 @@ import Education from "../slides/Education.svelte";
         education: { slide: Education, props: {} },
         programming: { slide: ProgrammingSlide, props: {} },
         map: { slide: MapSlide, props: {} },
-        themeEditor: { slide: ThemeEditor, props: {} }
+        themeEditor: { slide: ThemeEditor, props: {} },
+        webdevShowreel: { slide: WebDevShowreel, props: {} }
     };
 
     let slidesContainer: svelte.JSX.Element;
