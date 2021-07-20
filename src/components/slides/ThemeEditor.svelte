@@ -3,7 +3,7 @@
     import SizeBenchmark from "../organisms/SizeBenchmark.svelte";
     import Slider from "../molecules/Slider.svelte";
     import Slide from '$components/molecules/Slide.svelte';
-    import Button from "$components/atoms/Button.svelte";
+    import SlideHeader from '../molecules/SlideHeader.svelte';
 
     export let gotoSlide: (slide) => void;
     export let prevSlide;
@@ -29,10 +29,10 @@
 </script>
 
 <Slide themeOverride="editor-theme">
-    <Button size="mi" on:click={() => gotoSlide(prevSlide)} leftEmoji="←" label="Previous" round/>
-    <Separator size="sm"/>
-    <h3>Theme Editor</h3>
-    <Separator size="mi"/>
+    <SlideHeader 
+        onBackClicked={() => gotoSlide(prevSlide)}
+        title="🎨 Theme editor"
+    />
 
     <div class="editor-body">
         <div class="row wrap">

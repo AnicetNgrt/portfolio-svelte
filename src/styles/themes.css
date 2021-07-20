@@ -35,8 +35,8 @@ font-family: 'Roboto', sans-serif;
     --lg-fact: 0.75;
     --xl-fact: 1;
     --xxl-fact: 1.5;
-    --mega-fact: 1.75;
-    --giga-fact: 2.5;
+    --mega-fact: 1.7;
+    --giga-fact: 2.4;
 }
 
 @media (max-width: 3900px) {

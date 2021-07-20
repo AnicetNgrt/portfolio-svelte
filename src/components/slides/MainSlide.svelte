@@ -11,7 +11,7 @@
 </script>
 
 <Slide>
-    <header class="row center-y center-x wrap">
+    <header class="row center-y wrap header">
         <img id="pp" alt="me" src="https://avatars.githubusercontent.com/u/31180613?v=4"/>
         <div class="col">
             <h1 class="myname">Anicet</h1>
@@ -22,9 +22,10 @@
     <h4>Welcome! I'm a Computer Science student from Paris, France.</h4>
     <Separator size="mi"/>
     <p id="aboutme">Currently doing fullstack web development, web design, multi-paradigm programming, indie game creation and graphic art. This website is to showcase all of that to you.</p>
-    <Separator size="xl"/>
-
-    <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent round/>
+    <Separator size="lg"/>
+    <Box size="sm" margin>
+        <Button on:click={() => gotoSlide(nextSlide)} size="lg" label="Discover my world" rightEmoji="🌍" accent round/>
+    </Box>
     <Separator size="sm"/>
     <p>∷ or ∷</p>
     <Separator size="sm"/>
@@ -50,8 +51,8 @@
 </Slide>
 
 <style>
-    header {
-        width: max-content;
+    .header {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -75,15 +76,5 @@
         margin: var(--marg);
         margin-left: 0;
         border: solid var(--bord) var(--ccontrast);
-    }
-
-    @media (max-width: 700px) {
-        header div {
-            align-items: center;
-        }
-
-        .links {
-            justify-content: center;
-        }
     }
 </style>

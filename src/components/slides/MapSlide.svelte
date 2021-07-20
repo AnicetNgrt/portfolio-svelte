@@ -3,21 +3,22 @@
     import Slide from '$components/molecules/Slide.svelte';
     import Card from '$components/organisms/Card.svelte';
     import Box from '$components/atoms/Box.svelte';
+import SlideHeader from '../molecules/SlideHeader.svelte';
+import Separator from '../atoms/Separator.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
 </script>
 
 <Slide themeOverride="summary-slide-theme">
-    <Box size="lg" margin>
-        <Button 
-            size="mi" on:click={() => gotoSlide('main')} 
-            leftEmoji="←" 
-            label="Home"
-            round
-        />
-        <h1>La carte <span style="font-weight: normal;">🗺</span></h1>
-    </Box>
+    <SlideHeader 
+        onBackClicked={() => gotoSlide('main')}
+        title="🗺"
+    />
+    <div class="row center-x">
+        <h1>La carte</h1>
+    </div>
+    <Separator size="sm"/>
     <div class="col center-x wrap cards">
         <Card 
             title="Programming & CompSci."

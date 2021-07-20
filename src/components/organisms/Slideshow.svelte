@@ -4,7 +4,7 @@
     import ProgrammingSlide from "$components/slides/ProgrammingSlide.svelte";
     import MapSlide from "$components/slides/MapSlide.svelte";
     import ThemeEditor from "$components/slides/ThemeEditor.svelte";
-    import { initNavigation, updateNavigation } from "$logic/navigation";
+    import { initNavigation, updateNavigation } from "../../logic/navigation";
     import { onMount } from "svelte";
     import { tweened } from "svelte/motion";
     import { cubicInOut } from 'svelte/easing';

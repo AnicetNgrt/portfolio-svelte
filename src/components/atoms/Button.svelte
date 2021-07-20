@@ -93,7 +93,8 @@
     }
 
     .button.round.onechar {
-        padding: 0em 0.3em;
+        width: 2.15em;
+        height: 2.1em;
     }
     
     .button:hover, .button:focus {

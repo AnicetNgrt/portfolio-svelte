@@ -1,5 +1,5 @@
 <script lang="ts">
-import { mod } from "$logic/math";
+    import { mod } from "../../logic/math";
 
     import Button from "../atoms/Button.svelte";
     import Separator from "../atoms/Separator.svelte";

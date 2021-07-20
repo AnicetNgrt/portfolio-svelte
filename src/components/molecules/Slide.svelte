@@ -64,12 +64,15 @@
     }
 
     #content {
+        justify-content: center;
         position: absolute;
         top: 0em;
         width: max-content;
         max-width: 100%;
         height: max-content;
+        min-height: 100%;
         padding: var(--mi) var(--md);
+        padding-bottom: var(--xxl);
     }
 
     @media (max-width: 700px) {
@@ -78,9 +81,8 @@
         }
 
         #content {
-            justify-content: start;
-            align-items: center;
-            padding: 0 var(--pi);
+            justify-content: flex-start;
+            padding: var(--xl) var(--sm);
         }
 
         #siteName {
