@@ -3,25 +3,18 @@
     import Button from '$components/atoms/Button.svelte';
     import Slide from '$components/molecules/Slide.svelte';
     import Separator from '$components/atoms/Separator.svelte';
+    import SlideHeader from '../molecules/SlideHeader.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
 </script>
 
 <Slide url="education">
-    <Box size="lg" margin>
-        <div class="col">
-            <Button 
-                size="mi" on:click={() => gotoSlide('map')} 
-                leftEmoji="←" 
-                label="Back to La Carte"
-                round
-            />
-            <Separator size="sm"/>
-            <h2>📚 Education</h2>
-        </div>
-    </Box>
-    <Separator size="lg"/>
+    <SlideHeader
+        onBackClicked={() => gotoSlide('map')}
+        title="📚 Education"
+    />
+    <Separator size="mi"/>
     <Box size="sm" margin>
         <div class="col">
             <div class="col">

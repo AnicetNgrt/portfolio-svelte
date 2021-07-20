@@ -103,6 +103,7 @@
         position: unset;
         width: 80vw;
         background: transparent;
+        border: none;
     }
 
     img {
