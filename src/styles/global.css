@@ -69,14 +69,17 @@ h5 {
 	max-width: 80ch;
 }
 
-p {
+p, ul {
 	font-size: var(--sm);
 	max-width: 80ch;
+}
+
+ul {
+	margin-left: var(--sm);
 }
 
 .illustration {
 	max-width: 100%;
 	border: solid var(--bord) var(--ccontrast);
 	border-radius: var(--brad);
-	box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
 }

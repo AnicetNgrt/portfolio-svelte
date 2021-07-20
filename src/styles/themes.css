@@ -197,7 +197,7 @@ font-family: 'Roboto', sans-serif;
     --caccent: rgb(215, 153, 33);
     --caccent-faint: rgb(50, 48, 47);
     --ccontrast-shadow: rgba(13, 14, 15, var(--sopac));
-    --caccent-shadow: rgba(13, 14, 15, var(--sopac));
+    --caccent-shadow: rgba(215, 153, 33, var(--sopac));
 }
 
 .summary-slide-theme  {

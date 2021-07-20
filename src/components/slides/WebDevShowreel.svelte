@@ -8,6 +8,9 @@
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
+
+    // let projectIndex = 0;
+    // const maxIndex = 0;
 </script>
 
 <Slide url="fullstackdev-portfolio" themeOverride="programming-slides-theme">
@@ -15,29 +18,82 @@
         onBackClicked={() => gotoSlide('programming')}
         title="🌌 Fullstack development portfolio"
     />
-    <Separator size="md"/>
     <div class="col center-x">
-        <div class="row center-x">
-            <Button size="sm" leftEmoji="⋖" round label=""/>
-            <Separator size="sm"/>
-            <h3>3W Sherlocks</h3>
-            <Separator size="sm"/>
-            <Button size="sm" rightEmoji="⋗" round label=""/>
+        <div class="sticky">
+            <div class="row center-y">
+                <div class="col">
+                    <h3>3W Sherlocks</h3>
+                    <p>🥇 <i>"Bourse Coddity 2021" hackathon winner (1000€ cashprize)</i></p>
+                </div>
+                <Separator size="lg"/>
+                <!-- <Button size="md" rightEmoji="⋗" label="next"/> -->
+            </div>
+        </div>
+        <p class="info">📆 02/20 ~> 04/20 :: 👤 solo :: [🐳 Docker, 🐘 Postgres, 🍷 Elixir, 🔥 Phoenix, 🌀 Tailwind]</p>
+        <Separator size="sm"/>
+        <div>
+            <Caroussel slides={[
+                [{ src: "/3wsherlocks/image.png" }],
+                [{ src: "/3wsherlocks/screen_desktop_2.png" }],
+                [{ src: "/3wsherlocks/screen_desktop_3.png" }],
+                [{ src: "/3wsherlocks/screen_desktop_7.png" }],
+                [
+                    { src: "/3wsherlocks/screen_mobile_3.png" },
+                    { src: "/3wsherlocks/screen_mobile_12.png" },
+                    { src: "/3wsherlocks/screen_mobile_6.png" }
+                ]
+            ]}/>
         </div>
         <Separator size="sm"/>
-        <div class="preview">
-            <img class="illustration" alt="truc" src="/3wsherlocks/image.png"/>
+        <div class="col">
+            <Button size="sm" label="Check out the deployed version" leftEmoji="🌌" href="https://bourse2021-coddity.anicetnougaret.fr"/>
+            <Separator size="md"/>
+            <div>
+                <h4>About</h4>
+                <Separator size="sm"/>
+                <p>Web application that fights fake news through user-ruled online debunking sessions.</p>
+                <Separator size="mi"/>
+                <p>Fullstack project written in <b>Elixir</b> using <b>Phoenix framework</b> for it's real-time capabilities, <b>PostgreSQL</b>, <b>Docker</b> and <b>TailwindCSS</b>.</p>
+            </div>
+            <Separator size="lg"/>
+            <div>
+                <h4>Key features</h4>
+                <Separator size="sm"/>
+                <ul>
+                    <li>Take part in collaborative debunking sessions with anyone online using a real-time chat and voting system.</li>
+                    <Separator size="mi"/>
+                    <li>Have fun and stay engaged with a role-playing-game-like system that pushes participants to think differently.</li>
+                    <Separator size="mi"/>
+                    <li>Discover sessions with full-text search and useful filters.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </Slide>
 
 <style>
-    .preview {
-        height: 65vh;
+    .sticky {
+        background: var(--cbg);
+        position: sticky;
+        top: 0;
         width: 100%;
+        padding: var(--padd);
+        z-index: 2;
     }
 
-    .preview .illustration {
-        max-height: 100%;
+    .sticky .row {
+        justify-content: space-between;
+        padding: 0 var(--sm);
+    }
+
+    .info {
+        font-family: "Jetbrains Mono";
+        background: var(--caccent-faint);
+        min-width: 100%;
+        text-align: center;
+        color: var(--caccent);
+        padding: var(--padd);
+        font-size: var(--mi);
+        border-radius: var(--brad);
     }
 </style>
