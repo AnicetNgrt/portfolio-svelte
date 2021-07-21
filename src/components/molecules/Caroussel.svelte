@@ -14,10 +14,12 @@
     <div 
         class="row controls center-y"
     >
-        <Button size="sm" leftEmoji="⏮" label="" round on:click={() => shown = mod(shown-1, slides.length)}/>
-        <Separator size="pi"/>
-        <Button size="sm" rightEmoji="⏭" label="" round on:click={() => shown = mod(shown+1, slides.length)}/>
-        <Separator size="lg"/>
+        {#if slides.length > 1}
+            <Button size="sm" leftEmoji="⏮" label="" round on:click={() => shown = mod(shown-1, slides.length)}/>
+            <Separator size="pi"/>
+            <Button size="sm" rightEmoji="⏭" label="" round on:click={() => shown = mod(shown+1, slides.length)}/>
+            <Separator size="lg"/>
+        {/if}
         <Button size="sm" leftEmoji="🔎" label="enlarge" round on:click={() => modal = true}/>
     </div>
     {#each slides as pictures, i}
@@ -45,10 +47,12 @@
         </div>
         <Separator size="mi"/>
         <div class="row controls center-y show">
-            <Button size="sm" leftEmoji="⏮" label="previous" round on:click={() => shown = mod(shown-1, slides.length)}/>
-            <Separator size="pi"/>
-            <Button size="sm" rightEmoji="⏭" label="next" round on:click={() => shown = mod(shown+1, slides.length)}/>
-            <Separator size="lg"/>
+            {#if slides.length > 1}
+                <Button size="sm" leftEmoji="⏮" label="previous" round on:click={() => shown = mod(shown-1, slides.length)}/>
+                <Separator size="pi"/>
+                <Button size="sm" rightEmoji="⏭" label="next" round on:click={() => shown = mod(shown+1, slides.length)}/>
+                <Separator size="lg"/>
+            {/if}
             <Button size="sm" leftEmoji="❌" label="close" round on:click={() => modal = false}/>
         </div>
         <div class="row center-x pictures shown">
@@ -143,16 +147,15 @@
 
     .controls {
         position: absolute;
-        top: calc(calc(30vw + 10vh) - 1.3em);
+        top: calc(calc(30vw + 10vh) - 1.4em);
         background-color: var(--cbg);
-        border-radius: var(--brad);
+        border-radius: 1em;
         width: max-content;
         justify-content: center;
         margin-bottom: 0.3em;
         padding: 0.3em 0.35em;
+        padding-bottom: 0.2em;
         border-bottom: 0;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 1em;
         transition: opacity 0.2s;
         border: solid var(--bord) var(--ccontrast);
         box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);

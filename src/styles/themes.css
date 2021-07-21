@@ -181,17 +181,17 @@ font-family: 'Roboto', sans-serif;
     --caccent-shadow: rgba(32, 29, 44, var(--sopac));
 }
 
-.programming-slides-theme {
+.gruvbox-dark {
     --font: 'Roboto', sans-serif;
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
 
-    --br: 2;
-    --ssmth: 0px;
-    --sopac: 1;
-    --bthic: 2;
-    --soffx: 0;
-    --soffy: 1.2;
+    --br: 1;
+    --ssmth: 20px;
+    --sopac: 0.3;
+    --bthic: 0;
+    --soffx: -1;
+    --soffy: 1;
 
     --cbg: rgb(29, 32, 33);
     --cfaint: rgb(40, 40, 40);
@@ -199,8 +199,19 @@ font-family: 'Roboto', sans-serif;
     --ctext: rgb(168, 153, 132);
     --caccent: rgb(215, 153, 33);
     --caccent-faint: rgb(50, 48, 47);
-    --ccontrast-shadow: rgba(13, 14, 15, var(--sopac));
-    --caccent-shadow: rgba(215, 153, 33, var(--sopac));
+    --ccontrast-shadow: rgba(0, 1, 2, var(--sopac));
+    --caccent-shadow: rgba(0, 1, 2, var(--sopac));
+}
+
+.gruvbox-light {
+    --cbg: rgb(242, 229, 188);
+    --cfaint: rgb(249, 245, 215);
+    --ccontrast: rgb(80, 73, 69);
+    --ctext: rgb(80, 73, 69);
+    --caccent: rgb(13, 14, 15);
+    --caccent-faint: rgb(251, 241, 199);
+    --ccontrast-shadow: rgba(80, 73, 69, var(--sopac));
+    --caccent-shadow: rgba(124, 111, 100, var(--sopac));
 }
 
 .summary-slide-theme  {
@@ -209,7 +220,7 @@ font-family: 'Roboto', sans-serif;
 
     --br: 0;
     --ssmth: 10px;
-    --sopac: 0.05;
+    --sopac: 0.1;
     --bthic: 0.1;
 
     --cbg: rgb(240, 192, 120);

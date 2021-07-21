@@ -11,7 +11,7 @@
 </script>
 
 <Slide>
-    <header class="row center-y wrap header">
+    <header class="row center-y header">
         <img id="pp" alt="me" src="https://avatars.githubusercontent.com/u/31180613?v=4"/>
         <div class="col">
             <h1 class="myname">Anicet</h1>
@@ -60,21 +60,35 @@
         font-size: var(--giga); 
     }
 
+    
     .myname:not(:first-child) {
         margin-top: calc(var(--lg) / -1);
     }
 
     #pp {
-        display: none;
         font-size: var(--md);
-        width: 6em;
-        height: 6em;
+        width: 7.2em;
+        height: 7.2em;
         object-fit: cover;
         border-radius: 6em;
         padding: 0.1em;
-        background-color: var(--caccent-faint);
-        margin: var(--marg);
+        margin: var(--marg) var(--sm);
         margin-left: 0;
         border: solid var(--bord) var(--ccontrast);
+    }
+
+    @media(max-width: 700px) {
+        .myname {
+            font-size: var(--xxl);
+        }
+
+        #pp {
+            width: 5em;
+            height: 5em;
+        }
+
+        .myname:not(:first-child) {
+            margin-top: -0.275em;
+        }
     }
 </style>
