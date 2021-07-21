@@ -46,6 +46,7 @@ span.highlighted {
 	padding-left: var(--padd);
 	padding-right: var(--padd);
 	border-radius: calc(0.33 * var(--brad));
+	color: var(--ccontrast);
 }
 
 h1 {

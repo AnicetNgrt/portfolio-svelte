@@ -16,7 +16,9 @@
         'Jost': "'Jost', sans-serif",
         'Open Sans Condensed': "'Open Sans Condensed', sans-serif",
         'Playfair Display': "'Playfair Display', serif",
-        'Roboto': "'Roboto', sans-serif"
+        'Roboto': "'Roboto', sans-serif",
+        'Rubik': "'Rubik', sans-serif",
+        'Jetbrains Mono': "'Jetbrains Mono', monospace"
     }
 
     let brAmount = 3;
@@ -28,12 +30,12 @@
     let font = "'Jost', sans-serif";
 </script>
 
-<Slide themeOverride="editor-theme">
+<Slide>
     <SlideHeader 
         onBackClicked={() => gotoSlide(prevSlide)}
         title="🎨 Theme editor"
     />
-
+    <Separator size="md"/>
     <div class="editor-body">
         <div class="row wrap">
             <div class="col">
@@ -66,7 +68,7 @@
         --font: {font};
         --sopac: {sOpac};
         "
-        class="col light-theme theme-compute"
+        class="col theme-compute"
         >
             <Separator size="md"/>
             <SizeBenchmark size="mi"/>

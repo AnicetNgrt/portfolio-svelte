@@ -11,7 +11,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="fullstackdev-portfolio" themeOverride="gruvbox-dark">
+<Slide url="fullstackdev-portfolio" themeOverride="gruvbox">
     <SlideHeader 
         onBackClicked={() => gotoSlide('programming')}
         title="🌌 Fullstack development portfolio"
@@ -20,7 +20,7 @@
     <Portfolio tabs={[
         {
             title: "3W Sherlocks",
-            subtitle: '🥇 "Bourse Coddity 2021" hackathon winner (1000€ cashprize)',
+            subtitle: '🥇 Hackathon winner (1000€ cashprize)',
             info: '📆 02/20 ~> 04/20 :: 👤 solo :: [🐳Docker, 🐘Postgres, 🍷Elixir, 🔥Phoenix, 🌀Tailwind]',
             body: Sherlocks
         },

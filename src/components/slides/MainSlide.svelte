@@ -71,7 +71,6 @@
         height: 7.2em;
         object-fit: cover;
         border-radius: 6em;
-        padding: 0.1em;
         margin: var(--marg) var(--sm);
         margin-left: 0;
         border: solid var(--bord) var(--ccontrast);

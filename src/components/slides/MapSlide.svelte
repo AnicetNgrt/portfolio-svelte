@@ -10,7 +10,7 @@ import Separator from '../atoms/Separator.svelte';
     export const prevSlide = {};
 </script>
 
-<Slide themeOverride="summary-slide-theme">
+<Slide themeOverride="map-theme">
     <SlideHeader 
         onBackClicked={() => gotoSlide('main')}
         title="🗺"

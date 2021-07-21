@@ -1,43 +1,59 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { initTheme, theme, updateTheme } from '../../logic/theme';
 
-    export let themeOverride: string = '';
+    import { onMount } from 'svelte';
+    import Button from '../atoms/Button.svelte';
+    import Separator from '../atoms/Separator.svelte';
+
+    export let themeOverride: string = 'theme';
     export let url:string = '/';
 
+    let loaded = false;
+
     onMount(() => {
+        initTheme();
+        loaded = true;
         window.history.pushState({}, '', url);
     });
 </script>
 
-<div class="{themeOverride} theme-compute col" id="root">
-    <h1 id="siteName">anicetnougaret.fr</h1>
+{#if loaded}
+<div class="{themeOverride} {themeOverride}-{$theme} theme-compute col" id="root">
+    <div id="siteName" class="row center-y">
+        {#if $theme === 'dark'}
+            <Button size="sm" rightEmoji="🌞" round accent on:click={() => updateTheme('light')}/>
+        {:else}
+            <Button size="sm" rightEmoji="🌚" round accent on:click={() => updateTheme('dark')}/>
+        {/if}
+        <Separator size="mi"/>
+        <p>anicetnougaret.fr</p>
+        <Separator size="xl"/>
+    </div>
     <div class="col center-x" id="frame">
         <div class="col" id="content">
             <slot/>
         </div>
     </div>
 </div>
+{/if}
 
 <style>
-
     #siteName {
-        position: absolute;
+        position: fixed;
         font-weight: normal;
         width: max-content;
         height: max-content;
         font-size: 1vw;
-        top: calc(100% - 2.5vw);
-        left: calc(100% - 9.5vw);
-        padding: 0.5vw 0.7vw;
-        padding-bottom: 0.7vw;
-        padding-right: 1.2vw;
+        top: 0;
+        left: calc(100% - calc(3 * var(--mega)));
         z-index: 1;
         transform-origin: 0%;
-        color: var(--ccontrast);
         background-color: var(--cbg);
+        padding: var(--pi) var(--mi);
         border: solid var(--bord) var(--ccontrast);
-        border-bottom: none;
-        border-right: none;
+        border-top: 0;
+        border-right: 0;
+        border-bottom-left-radius: var(--brad);
     }
 
     #root {
@@ -72,7 +88,7 @@
         height: max-content;
         min-height: 100%;
         padding: var(--mi) var(--md);
-        padding-bottom: var(--xxl);
+        padding-bottom: var(--xl);
     }
 
     @media (max-width: 700px) {
@@ -83,15 +99,6 @@
         #content {
             justify-content: flex-start;
             padding: var(--xl) var(--sm);
-        }
-
-        #siteName {
-            font-size: 0.5em;
-            top: calc(100% - 2.5em);
-            left: calc(100% - 9.5em);
-            padding: 0.5em 0.7em;
-            padding-bottom: 0.7em;
-            padding-right: 1.2em;
         }
     }
 </style>

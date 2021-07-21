@@ -23,8 +23,8 @@ font-family: 'Roboto', sans-serif;
     --sopac: 1;
     --bthic: 2;
     --soffy: 1;
-    --soffx: -1;
-    --trans: 1;
+    --soffx: -0.7;
+    --trans: 0.7;
 
     --global-size: 49px;
 
@@ -150,38 +150,29 @@ font-family: 'Roboto', sans-serif;
     --shad-offy-large: calc(var(--soffy) * 0.3em);
 }
 
-.light-theme {
+.theme-light {
     --cbg: rgb(255, 255, 255);
     --cfaint: white;
     --ccontrast: black;
     --ctext: black;
     --caccent: rgb(0, 0, 0);
-    --caccent-faint: rgb(208, 255, 169);
+    --caccent-faint: rgb(135, 253, 174);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(0, 0, 0, var(--sopac));
 }
 
-.editor-theme {
-    --title-font: 'Inter', sans-serif;
-    --font: 'Jost', sans-serif;
-    --br: 2;
-    --ssmth: 15px;
-    --sopac: 0.15;
-    --bthic: 0;
-    --soffx: 0;
-    --soffy: 1;
-
-    --cbg: white;
-    --cfaint: white;
-    --ccontrast: black;
-    --ctext: black;
-    --caccent: rgb(32, 29, 44);
-    --caccent-faint: rgb(219, 255, 248);
-    --ccontrast-shadow: rgba(11, 20, 27, var(--sopac));
-    --caccent-shadow: rgba(32, 29, 44, var(--sopac));
+.theme-dark {
+    --cbg: #2a2a2e;
+    --cfaint: #38383d;
+    --ccontrast: rgb(12, 12, 13);
+    --ctext: #d7d7db;
+    --caccent: rgb(12, 12, 13);
+    --caccent-faint: #9400ff;
+    --ccontrast-shadow: rgba(12, 12, 13, var(--sopac));
+    --caccent-shadow: rgba(12, 12, 13, var(--sopac));
 }
 
-.gruvbox-dark {
+.gruvbox {
     --font: 'Roboto', sans-serif;
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
@@ -192,8 +183,10 @@ font-family: 'Roboto', sans-serif;
     --bthic: 0;
     --soffx: -1;
     --soffy: 1;
+}
 
-    --cbg: rgb(29, 32, 33);
+.gruvbox-dark {
+    --cbg: rgb(31, 33, 36);
     --cfaint: rgb(40, 40, 40);
     --ccontrast: rgb(13, 14, 15);
     --ctext: rgb(168, 153, 132);
@@ -214,7 +207,7 @@ font-family: 'Roboto', sans-serif;
     --caccent-shadow: rgba(124, 111, 100, var(--sopac));
 }
 
-.summary-slide-theme  {
+.map-theme  {
     --font: 'Roboto', sans-serif;
     --title-font: 'Playfair Display', serif;
 
@@ -222,13 +215,26 @@ font-family: 'Roboto', sans-serif;
     --ssmth: 10px;
     --sopac: 0.1;
     --bthic: 0.1;
+}
 
+.map-theme-light {
     --cbg: rgb(240, 192, 120);
     --cfaint: rgb(255, 218, 148);
     --ccontrast: rgb(31, 32, 46);
     --ctext: rgb(31, 32, 46);
-    --caccent: rgb(216, 141, 91);
+    --caccent: rgb(255, 76, 52);
     --caccent-faint: rgb(255, 218, 148);
+    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --caccent-shadow: rgba(59, 52, 48, var(--sopac));
+} 
+
+.map-theme-dark  {
+    --cbg: rgb(0,43,54);
+    --cfaint: rgb(7,54,66);
+    --ccontrast: rgb(166, 168, 135);
+    --ctext: rgb(248, 230, 179);
+    --caccent: rgb(112, 202, 235);
+    --caccent-faint: rgb(7,54,66);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(59, 52, 48, var(--sopac));
 }

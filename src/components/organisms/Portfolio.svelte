@@ -45,11 +45,11 @@
 <style>
     .sticky {
         background: var(--cbg);
-        position: sticky;
-        top: 0;
         width: 100%;
         padding: var(--padd);
-        z-index: 2;
+        /* position: sticky;
+        top: 0;
+        z-index: 2; */
     }
 
     .sticky .row {

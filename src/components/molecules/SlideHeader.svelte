@@ -21,7 +21,6 @@
 </div>
 
 <style>
-
     .header {
         width: 100%;
     }

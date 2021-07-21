@@ -45,10 +45,10 @@
                     <Separator size="pi"/>
                     <div class="row wrap">
                         <Box size="sm" margin>
-                            <Button size="sm" label="Coddity's Blog" leftEmoji="📰" round accent href="https://blog.coddity.com/"/>
+                            <Button size="sm" label="Coddity's Blog" leftEmoji="📰" round href="https://blog.coddity.com/"/>
                         </Box>
                         <Box size="sm" margin>
-                            <Button size="sm" label="Internship report" leftEmoji="🔍" round accent href="/documents/coddity_2021_rapport_stage.pdf" relExternal/>
+                            <Button size="sm" label="Internship report" leftEmoji="🔍" round href="/documents/coddity_2021_rapport_stage.pdf" relExternal/>
                         </Box>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <Separator size="pi"/>
                     <div class="row wrap">
                         <Box size="sm" margin>
-                            <Button size="sm" label="About COVID-19 students mentoring" leftEmoji="🎓" round accent href="https://u-paris.fr/tuteurs-covid-conseils/"/>
+                            <Button size="sm" label="About COVID-19 students mentoring" leftEmoji="🎓" round href="https://u-paris.fr/tuteurs-covid-conseils/"/>
                         </Box>
                     </div>
                 </div>

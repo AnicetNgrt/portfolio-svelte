@@ -2,6 +2,7 @@
     import Separator from '../../atoms/Separator.svelte';
     import Button from '../../atoms/Button.svelte';
     import Caroussel from '../../molecules/Caroussel.svelte';
+    import Box from '../../atoms/Box.svelte';
 </script>
 
 <Caroussel slides={[
@@ -26,6 +27,8 @@
         <p>Web application that fights fake news through user-ruled online debunking sessions.</p>
         <Separator size="mi"/>
         <p>Fullstack project written in <b>Elixir</b> using <b>Phoenix framework</b> for it's real-time capabilities, <b>PostgreSQL</b>, <b>Docker</b> and <b>TailwindCSS</b>.</p>
+        <Separator size="mi"/>
+        <p>Won me "Bourse Coddity 2021", a yearly hackathon for French students.</p>
     </div>
     <Separator size="lg"/>
     <div>
@@ -38,5 +41,18 @@
             <Separator size="mi"/>
             <li>Discover sessions with full-text search and useful filters.</li>
         </ul>
+    </div>
+    <Separator size="lg"/>
+    <div>
+        <h4>Related links</h4>
+        <Separator size="sm"/>
+        <div class="row wrap">
+            <Box size="sm" margin>
+                <Button size="md" label="Github Repositories" leftEmoji="🐙" href="https://github.com/AnicetNgrt/3WSherlocks"/>
+            </Box>
+            <Box size="sm" margin>
+                <Button size="md" label="About Bourse Coddity" leftEmoji="🏆" href="https://bourse.coddity.com/"/>
+            </Box>
+        </div>
     </div>
 </div>
