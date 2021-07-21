@@ -4,6 +4,7 @@
     import Slider from "../molecules/Slider.svelte";
     import Slide from '$components/molecules/Slide.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
+    import { theme } from "../../logic/theme";
 
     export let gotoSlide: (slide) => void;
     export let prevSlide;
@@ -68,7 +69,7 @@
         --font: {font};
         --sopac: {sOpac};
         "
-        class="col theme-compute"
+        class="col theme-compute theme-{$theme}"
         >
             <Separator size="md"/>
             <SizeBenchmark size="mi"/>
