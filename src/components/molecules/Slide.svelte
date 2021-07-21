@@ -25,8 +25,6 @@
         {:else}
             <Button size="sm" rightEmoji="🌚" round accent on:click={() => updateTheme('dark')}/>
         {/if}
-        <Separator size="mi"/>
-        <p>anicetnougaret.fr</p>
         <Separator size="xl"/>
     </div>
     <div class="col center-x" id="frame">
@@ -45,7 +43,7 @@
         height: max-content;
         font-size: 1vw;
         top: 0;
-        left: calc(100% - calc(3 * var(--mega)));
+        left: calc(100% - calc(0.9 * var(--mega)));
         z-index: 1;
         transform-origin: 0%;
         background-color: var(--cbg);

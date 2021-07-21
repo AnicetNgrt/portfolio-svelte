@@ -53,9 +53,9 @@
                             </p>
                             <Separator size="sm"/>
                             <div class="row">
-                                <Button size="sm" label="About page" leftEmoji="🔎" round accent href="https://homesynck.anicetnougaret.fr/" relExternal/>
+                                <Button size="sm" label="About page" leftEmoji="🔎" round href="https://homesynck.anicetnougaret.fr/" relExternal/>
                                 <Separator size="sm"/>
-                                <Button size="sm" label="Git repository" leftEmoji="🐙" round accent href="https://github.com/Homesynck" relExternal/>
+                                <Button size="sm" label="Git repository" leftEmoji="🐙" round href="https://github.com/Homesynck" relExternal/>
                             </div>
                         </Box>
                     </div>
