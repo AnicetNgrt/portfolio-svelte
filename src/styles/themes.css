@@ -188,7 +188,7 @@ font-family: 'Roboto', sans-serif;
 .gruvbox-dark {
     --cbg: rgb(31, 33, 36);
     --cfaint: rgb(40, 40, 40);
-    --ccontrast: rgb(13, 14, 15);
+    --ccontrast: rgb(10, 11, 12);
     --ctext: rgb(168, 153, 132);
     --caccent: rgb(215, 153, 33);
     --caccent-faint: rgb(50, 48, 47);
@@ -237,4 +237,39 @@ font-family: 'Roboto', sans-serif;
     --caccent-faint: rgb(7,54,66);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(59, 52, 48, var(--sopac));
+}
+
+.design {
+    --font: 'Roboto', sans-serif;
+    --title-font: 'Rubik', sans-serif;
+    --title-weight: 500;
+
+    --br: 0;
+    --ssmth: 0px;
+    --sopac: 0;
+    --bthic: 1;
+    --soffx: 0;
+    --soffy: 1;
+}
+
+.design-light {
+    --cbg: rgb(255, 255, 255);
+    --cfaint: rgb(255, 255, 255);
+    --ccontrast: #242749;
+    --ctext: #242749;
+    --caccent: rgb(36, 39, 73);
+    --caccent-faint: rgb(255, 255, 255);
+    --ccontrast-shadow: rgba(197, 209, 212, var(--sopac));
+    --caccent-shadow: rgba(197, 209, 212, var(--sopac));
+}
+
+.design-dark {
+    --cbg: black;
+    --cfaint: black;
+    --ccontrast: #6b4ca0;
+    --ctext: #6b4ca0;
+    --caccent: #6b4ca0;
+    --caccent-faint: black;
+    --ccontrast-shadow: rgba(10, 11, 22, var(--sopac));
+    --caccent-shadow: rgba(10, 11, 22, var(--sopac));
 }

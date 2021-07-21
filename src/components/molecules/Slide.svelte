@@ -20,12 +20,12 @@
 {#if loaded}
 <div class="{themeOverride} {themeOverride}-{$theme} theme-compute col" id="root">
     <div id="siteName" class="row center-y">
+        <Separator size="xl"/>
         {#if $theme === 'dark'}
             <Button size="sm" rightEmoji="🌞" round accent on:click={() => updateTheme('light')}/>
         {:else}
             <Button size="sm" rightEmoji="🌚" round accent on:click={() => updateTheme('dark')}/>
         {/if}
-        <Separator size="xl"/>
     </div>
     <div class="col center-x" id="frame">
         <div class="col" id="content">
@@ -42,16 +42,16 @@
         width: max-content;
         height: max-content;
         font-size: 1vw;
-        top: 0;
-        left: calc(100% - calc(0.9 * var(--mega)));
-        z-index: 1;
+        top: calc(100% - calc(0.8 * var(--mega)));
+        left: calc(-0.6 * var(--mega));
         transform-origin: 0%;
         background-color: var(--cbg);
         padding: var(--pi) var(--mi);
         border: solid var(--bord) var(--ccontrast);
-        border-top: 0;
-        border-right: 0;
-        border-bottom-left-radius: var(--brad);
+        border-bottom: 0;
+        border-left: 0;
+        border-top-right-radius: var(--brad);
+        z-index: 10;
     }
 
     #root {
@@ -96,7 +96,7 @@
 
         #content {
             justify-content: flex-start;
-            padding: var(--xl) var(--sm);
+            padding: var(--sm) var(--pi);
         }
     }
 </style>

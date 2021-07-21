@@ -16,7 +16,6 @@
         { src: "/3wsherlocks/screen_mobile_6.png" }
     ]
 ]}/>
-<Separator size="sm"/>
 <div class="col">
     <Separator size="sm"/>
     <Button size="md" label="Check out the deployed version" rightEmoji="🚀" href="https://bourse2021-coddity.anicetnougaret.fr"/>

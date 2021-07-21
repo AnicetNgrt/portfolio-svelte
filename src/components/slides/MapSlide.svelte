@@ -49,8 +49,9 @@ import Separator from '../atoms/Separator.svelte';
             </div>
         </div>
         <Card
-            title="Design & Art" wip disabled
+            title="Design & Art"
             abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
+            on:click={() => gotoSlide('designAndArt')}
         />
         <Card
             title="Game Creation" wip disabled

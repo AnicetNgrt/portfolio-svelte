@@ -11,10 +11,10 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="fullstackdev-portfolio" themeOverride="gruvbox">
+<Slide url="webdesign-portfolio" themeOverride="design">
     <SlideHeader 
-        onBackClicked={() => gotoSlide('programming')}
-        title="🌌 Fullstack dev portfolio"
+        onBackClicked={() => gotoSlide('designAndArt')}
+        title="📐 Web design portfolio"
     />
     <Separator size="md"/>
     <Portfolio tabs={[

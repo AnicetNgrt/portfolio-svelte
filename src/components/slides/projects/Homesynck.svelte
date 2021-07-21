@@ -8,7 +8,6 @@
 <Caroussel slides={[
     [{ src: "/homesynck/homesynck_desktop_1.PNG" }],
 ]}/>
-<Separator size="sm"/>
 <div class="col">
     <Separator size="sm"/>
     <Button size="md" label="Check out the deployed version" rightEmoji="🚀" href="https://homesynck.anicetnougaret.fr"/>

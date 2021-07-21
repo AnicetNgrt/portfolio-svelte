@@ -4,9 +4,15 @@
     import { mod } from '../../logic/math';
 
     export let tabs = [];
+    export let type:string = 'project';
     let current = 0;
-
+    
     let portfolio;
+
+    const onNext = () => {
+        current = mod(current + 1, tabs.length);
+        setTimeout(() => portfolio.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
 </script>
 
 <div class="portfolio col center-x" bind:this={portfolio}>
@@ -20,65 +26,68 @@
                     {/if}
                 {/each}
             </div>
-            <Separator size="lg"/>
             <Button 
                 size="sm" 
-                on:click={() => {
-                    current = mod(current + 1, tabs.length);
-                    portfolio.scrollIntoView({ behavior: 'smooth' });
-                }} 
-                label="next" 
+                on:click={onNext} 
+                label="next {type}"
             />
         </div>
     </div>
-    <Separator size="pi"/>
+    <Separator size="sm"/>
     {#each tabs as { info }, i}
         {#if i === current}
             <p class="info">{info}</p>
         {/if}
     {/each}
-    <Separator size="sm"/>
     {#each tabs as { body }, i}
         {#if i === current}
-            <svelte:component this={body} />
+            <div class="body">
+                <svelte:component this={body} />
+            </div>
         {/if}
     {/each}
     <Separator size="xl"/>
     <Button 
         size="sm" 
-        on:click={() => {
-            current = mod(current + 1, tabs.length);
-            portfolio.scrollIntoView({ behavior: 'smooth' });
-        }} 
-        label="See another project" 
+        on:click={onNext} 
+        label="See another {type}" 
     />
 </div>
 
 <style>
     .sticky {
-        background: var(--cbg);
+        background-color: var(--caccent-faint);
         width: 100%;
-        padding: 0.2em;
-        padding-top: 0;
-        padding-bottom: var(--padd);
+        padding: var(--pi) var(--mi);
         position: sticky;
-        top: 0;
+        top: calc(-2 * var(--bord));
         z-index: 2;
+        border: solid var(--bord) var(--ccontrast);
+        border-radius: var(--brad);
+        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 
     .sticky .row {
         justify-content: space-between;
-        padding: 0 var(--sm);
+    }
+
+    .sticky .row .col h4, .sticky .row .col p {
+        color: var(--ccontrast);
+    }
+
+    .body {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 var(--pi);
     }
 
     .info {
         font-family: "Jetbrains Mono";
-        background: var(--caccent-faint);
         min-width: 100%;
-        text-align: center;
-        color: var(--caccent);
-        padding: var(--padd);
-        font-size: var(--mi);
+        text-align: left;
+        color: var(--ctext);
+        padding: var(--pi) var(--mi);
+        font-size: var(--sm);
         border-radius: var(--brad);
     }
 </style>
