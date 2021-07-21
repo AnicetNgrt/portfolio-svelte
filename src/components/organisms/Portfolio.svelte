@@ -5,26 +5,29 @@
 
     export let tabs = [];
     let current = 0;
+
+    let portfolio;
 </script>
 
-<div class="col center-x">
+<div class="portfolio col center-x" bind:this={portfolio}>
     <div class="sticky">
         <div class="row center-y">
             <div class="col">
                 {#each tabs as { title, subtitle }, i}
                     {#if i === current}
-                        <h3>{title}</h3>
+                        <h4>{title}</h4>
                         <p>{subtitle}</p>
                     {/if}
                 {/each}
             </div>
             <Separator size="lg"/>
             <Button 
-                size="md" 
-                on:click={() => current = mod(current + 1, tabs.length)} 
-                round 
+                size="sm" 
+                on:click={() => {
+                    current = mod(current + 1, tabs.length);
+                    portfolio.scrollIntoView({ behavior: 'smooth' });
+                }} 
                 label="next" 
-                rightEmoji="⏭"
             />
         </div>
     </div>
@@ -40,16 +43,27 @@
             <svelte:component this={body} />
         {/if}
     {/each}
+    <Separator size="xl"/>
+    <Button 
+        size="sm" 
+        on:click={() => {
+            current = mod(current + 1, tabs.length);
+            portfolio.scrollIntoView({ behavior: 'smooth' });
+        }} 
+        label="See another project" 
+    />
 </div>
 
 <style>
     .sticky {
         background: var(--cbg);
         width: 100%;
-        padding: var(--padd);
-        /* position: sticky;
+        padding: 0.2em;
+        padding-top: 0;
+        padding-bottom: var(--padd);
+        position: sticky;
         top: 0;
-        z-index: 2; */
+        z-index: 2;
     }
 
     .sticky .row {

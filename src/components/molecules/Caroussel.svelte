@@ -15,12 +15,12 @@
         class="row controls center-y"
     >
         {#if slides.length > 1}
-            <Button size="sm" leftEmoji="⏮" label="" round on:click={() => shown = mod(shown-1, slides.length)}/>
+            <Button size="sm" leftEmoji=" " rightEmoji=" " label="⏮" on:click={() => shown = mod(shown-1, slides.length)}/>
             <Separator size="pi"/>
-            <Button size="sm" rightEmoji="⏭" label="" round on:click={() => shown = mod(shown+1, slides.length)}/>
+            <Button size="sm" rightEmoji=" " leftEmoji=" " label="⏭" on:click={() => shown = mod(shown+1, slides.length)}/>
             <Separator size="lg"/>
         {/if}
-        <Button size="sm" leftEmoji="🔎" label="enlarge" round on:click={() => modal = true}/>
+        <Button size="sm" leftEmoji="🔎" label="enlarge" on:click={() => modal = true}/>
     </div>
     {#each slides as pictures, i}
         <div
@@ -48,12 +48,12 @@
         <Separator size="mi"/>
         <div class="row controls center-y show">
             {#if slides.length > 1}
-                <Button size="sm" leftEmoji="⏮" label="previous" round on:click={() => shown = mod(shown-1, slides.length)}/>
+                <Button size="sm" leftEmoji="⏮" label="previous" on:click={() => shown = mod(shown-1, slides.length)}/>
                 <Separator size="pi"/>
-                <Button size="sm" rightEmoji="⏭" label="next" round on:click={() => shown = mod(shown+1, slides.length)}/>
+                <Button size="sm" rightEmoji="⏭" label="next" on:click={() => shown = mod(shown+1, slides.length)}/>
                 <Separator size="lg"/>
             {/if}
-            <Button size="sm" leftEmoji="❌" label="close" round on:click={() => modal = false}/>
+            <Button size="sm" leftEmoji="❌" label="close" on:click={() => modal = false}/>
         </div>
         <div class="row center-x pictures shown">
             {#each slides[shown] as { src, label, widthPerc }, j}
@@ -97,8 +97,6 @@
         max-width: 100%;
         padding-top: 0.6em;
         border-radius: var(--brad);
-        border: solid var(--bord) var(--ccontrast);
-        box-shadow: inset var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
         overflow: hidden;
     }
 
@@ -147,9 +145,8 @@
 
     .controls {
         position: absolute;
-        top: calc(calc(30vw + 10vh) - 1.4em);
-        background-color: var(--cbg);
-        border-radius: 1em;
+        top: calc(calc(30vw + 10vh) - 1.7em);
+        border-radius: var(--brad);
         width: max-content;
         justify-content: center;
         margin-bottom: 0.3em;
@@ -157,7 +154,5 @@
         padding-bottom: 0.2em;
         border-bottom: 0;
         transition: opacity 0.2s;
-        border: solid var(--bord) var(--ccontrast);
-        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 </style>

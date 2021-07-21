@@ -177,12 +177,12 @@ font-family: 'Roboto', sans-serif;
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
 
-    --br: 1;
-    --ssmth: 20px;
+    --br: 0.5;
+    --ssmth: 15px;
     --sopac: 0.3;
     --bthic: 0;
-    --soffx: -1;
-    --soffy: 1;
+    --soffx: 0;
+    --soffy: 0.75;
 }
 
 .gruvbox-dark {
@@ -192,19 +192,19 @@ font-family: 'Roboto', sans-serif;
     --ctext: rgb(168, 153, 132);
     --caccent: rgb(215, 153, 33);
     --caccent-faint: rgb(50, 48, 47);
-    --ccontrast-shadow: rgba(0, 1, 2, var(--sopac));
-    --caccent-shadow: rgba(0, 1, 2, var(--sopac));
+    --ccontrast-shadow: rgba(13, 14, 15, var(--sopac));
+    --caccent-shadow: rgba(13, 14, 15, var(--sopac));
 }
 
 .gruvbox-light {
     --cbg: rgb(242, 229, 188);
     --cfaint: rgb(249, 245, 215);
-    --ccontrast: rgb(80, 73, 69);
+    --ccontrast: rgb(168, 153, 132);
     --ctext: rgb(80, 73, 69);
     --caccent: rgb(13, 14, 15);
     --caccent-faint: rgb(251, 241, 199);
-    --ccontrast-shadow: rgba(80, 73, 69, var(--sopac));
-    --caccent-shadow: rgba(124, 111, 100, var(--sopac));
+    --ccontrast-shadow: rgba(168, 153, 132, var(--sopac));
+    --caccent-shadow: rgba(168, 153, 132, var(--sopac));
 }
 
 .map-theme  {
