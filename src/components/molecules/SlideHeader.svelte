@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Box from '../atoms/Box.svelte';
     import Separator from '$components/atoms/Separator.svelte';
     import Button from '$components/atoms/Button.svelte';
 
@@ -10,7 +9,7 @@
 <div class="header row center-y center-x wrap">
     <div style="margin-top: 0.2em">
         <Button 
-            size="mi" on:click={onBackClicked} 
+            size="sm" on:click={onBackClicked} 
             leftEmoji="◂" 
             label="Go back"
         />

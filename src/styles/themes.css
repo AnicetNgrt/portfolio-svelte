@@ -162,11 +162,14 @@ font-family: 'Roboto', sans-serif;
 }
 
 .editor-theme {
+    --title-font: 'Inter', sans-serif;
     --font: 'Jost', sans-serif;
-    --br: 3;
-    --ssmth: 10px;
-    --sopac: 0.1;
+    --br: 2;
+    --ssmth: 15px;
+    --sopac: 0.15;
     --bthic: 0;
+    --soffx: 0;
+    --soffy: 1;
 
     --cbg: white;
     --cfaint: white;
@@ -174,7 +177,7 @@ font-family: 'Roboto', sans-serif;
     --ctext: black;
     --caccent: rgb(32, 29, 44);
     --caccent-faint: rgb(219, 255, 248);
-    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
+    --ccontrast-shadow: rgba(11, 20, 27, var(--sopac));
     --caccent-shadow: rgba(32, 29, 44, var(--sopac));
 }
 

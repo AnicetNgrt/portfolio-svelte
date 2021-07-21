@@ -18,6 +18,7 @@
         onBackClicked={() => gotoSlide('programming')}
         title="🌌 Fullstack development portfolio"
     />
+    <Separator size="sm"/>
     <div class="col center-x">
         <div class="sticky">
             <div class="row center-y">
@@ -26,28 +27,28 @@
                     <p>🥇 <i>"Bourse Coddity 2021" hackathon winner (1000€ cashprize)</i></p>
                 </div>
                 <Separator size="lg"/>
-                <!-- <Button size="md" rightEmoji="⋗" label="next"/> -->
+                <Button size="md" round label="next" rightEmoji="⏭"/>
             </div>
         </div>
-        <p class="info">📆 02/20 ~> 04/20 :: 👤 solo :: [🐳 Docker, 🐘 Postgres, 🍷 Elixir, 🔥 Phoenix, 🌀 Tailwind]</p>
+        <Separator size="pi"/>
+        <p class="info">📆 02/20 ~> 04/20 :: 👤 solo :: [🐳Docker, 🐘Postgres, 🍷Elixir, 🔥Phoenix, 🌀Tailwind]</p>
         <Separator size="sm"/>
-        <div>
-            <Caroussel slides={[
-                [{ src: "/3wsherlocks/image.png" }],
-                [{ src: "/3wsherlocks/screen_desktop_2.png" }],
-                [{ src: "/3wsherlocks/screen_desktop_3.png" }],
-                [{ src: "/3wsherlocks/screen_desktop_7.png" }],
-                [
-                    { src: "/3wsherlocks/screen_mobile_3.png" },
-                    { src: "/3wsherlocks/screen_mobile_12.png" },
-                    { src: "/3wsherlocks/screen_mobile_6.png" }
-                ]
-            ]}/>
-        </div>
+        <Caroussel slides={[
+            [{ src: "/3wsherlocks/image.png" }],
+            [{ src: "/3wsherlocks/screen_desktop_2.png" }],
+            [{ src: "/3wsherlocks/screen_desktop_3.png" }],
+            [{ src: "/3wsherlocks/screen_desktop_7.png" }],
+            [
+                { src: "/3wsherlocks/screen_mobile_3.png" },
+                { src: "/3wsherlocks/screen_mobile_12.png" },
+                { src: "/3wsherlocks/screen_mobile_6.png" }
+            ]
+        ]}/>
         <Separator size="sm"/>
         <div class="col">
-            <Button size="sm" label="Check out the deployed version" leftEmoji="🌌" href="https://bourse2021-coddity.anicetnougaret.fr"/>
-            <Separator size="md"/>
+            <Separator size="sm"/>
+            <Button size="md" label="Check out the deployed version" rightEmoji="🚀" href="https://bourse2021-coddity.anicetnougaret.fr"/>
+            <Separator size="lg"/>
             <div>
                 <h4>About</h4>
                 <Separator size="sm"/>

@@ -14,11 +14,11 @@
     <div 
         class="row controls center-y"
     >
-        <Button size="mi" leftEmoji="⋖" label="previous" on:click={() => shown = mod(shown-1, slides.length)}/>
+        <Button size="sm" leftEmoji="⏮" label="" round on:click={() => shown = mod(shown-1, slides.length)}/>
         <Separator size="pi"/>
-        <Button size="mi" rightEmoji="⋗" label="next" on:click={() => shown = mod(shown+1, slides.length)}/>
+        <Button size="sm" rightEmoji="⏭" label="" round on:click={() => shown = mod(shown+1, slides.length)}/>
         <Separator size="lg"/>
-        <Button size="mi" leftEmoji="🔎" label="click to enlarge" on:click={() => modal = true}/>
+        <Button size="sm" leftEmoji="🔎" label="enlarge" round on:click={() => modal = true}/>
     </div>
     {#each slides as pictures, i}
         <div
@@ -40,12 +40,16 @@
 
 {#if modal}
     <div class="col center-x modal">
+        <div class="protip">
+            <p>💡 Look at this with landscape screen orientation to enlarge the picture even more! 📱🔄</p>
+        </div>
+        <Separator size="mi"/>
         <div class="row controls center-y show">
-            <Button size="mi" leftEmoji="⋖" label="previous" on:click={() => shown = mod(shown-1, slides.length)}/>
+            <Button size="sm" leftEmoji="⏮" label="previous" round on:click={() => shown = mod(shown-1, slides.length)}/>
             <Separator size="pi"/>
-            <Button size="mi" rightEmoji="⋗" label="next" on:click={() => shown = mod(shown+1, slides.length)}/>
+            <Button size="sm" rightEmoji="⏭" label="next" round on:click={() => shown = mod(shown+1, slides.length)}/>
             <Separator size="lg"/>
-            <Button size="mi" leftEmoji="❌" label="click to close" on:click={() => modal = false}/>
+            <Button size="sm" leftEmoji="❌" label="close" round on:click={() => modal = false}/>
         </div>
         <div class="row center-x pictures shown">
             {#each slides[shown] as { src, label, widthPerc }, j}
@@ -59,6 +63,19 @@
 {/if}
 
 <style>
+    .protip {
+        display: none;
+    }
+
+    @media (max-width: 700px) and (max-aspect-ratio: 1/1) {
+        .protip {
+            display: block;
+            padding: var(--sm) var(--md);
+            background-color: var(--cbg);
+            width: 100%;
+        }
+    }
+
     .modal {
         position: fixed;
         top: 0;
@@ -67,23 +84,24 @@
         width: 100vw;
         height: 100vh;
         z-index: 10;
-        padding: var(--sm) 0;
     }
 
     .caroussel {
         position: relative;
-        height: max-content;
-        overflow: hidden;
-        height: calc(calc(30vw + 10vh) + 2.5em);
-        padding-top: 0.4em;
+        height: calc(calc(30vw + 10vh) + 1em);
+        width: max-content;
+        max-width: 100%;
+        padding-top: 0.6em;
         border-radius: var(--brad);
-        border: dotted 2px var(--ccontrast);
+        border: solid var(--bord) var(--ccontrast);
+        box-shadow: inset var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
+        overflow: hidden;
     }
 
     .pictures {
         height: calc(30vw + 10vh);
         width: 60ch;
-        max-width: 90vw;
+        max-width: 100%;
     }
 
     .pictures.modal-open {
@@ -104,6 +122,7 @@
         width: 80vw;
         background: transparent;
         border: none;
+        box-shadow: none;
     }
 
     img {
@@ -124,16 +143,18 @@
 
     .controls {
         position: absolute;
-        top: calc(calc(30vw + 10vh) + 0.64em);
+        top: calc(calc(30vw + 10vh) - 1.3em);
+        background-color: var(--cbg);
         border-radius: var(--brad);
         width: max-content;
         justify-content: center;
         margin-bottom: 0.3em;
-        padding: 0.2em 0.28em;
-        border: dotted 2px var(--ccontrast);
+        padding: 0.3em 0.35em;
         border-bottom: 0;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
         transition: opacity 0.2s;
+        border: solid var(--bord) var(--ccontrast);
+        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 </style>
