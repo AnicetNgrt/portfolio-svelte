@@ -11,7 +11,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="webdesign-portfolio" themeOverride="design">
+<Slide url="webdesign-portfolio" themeOverride="gruvbox">
     <SlideHeader 
         onBackClicked={() => gotoSlide('designAndArt')}
         title="📐 Web design portfolio"

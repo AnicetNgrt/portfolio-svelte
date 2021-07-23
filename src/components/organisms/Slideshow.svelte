@@ -11,7 +11,7 @@
     import Education from "../slides/Education.svelte";
     import WebDevShowreel from "../slides/WebDevShowreel.svelte";
     import DesignAndArt from "../slides/DesignAndArt.svelte";
-import WebDesignPortfolio from "../slides/WebDesignPortfolio.svelte";
+    import WebDesignPortfolio from "../slides/WebDesignPortfolio.svelte";
     
     export let slideOverride: string = null;
 

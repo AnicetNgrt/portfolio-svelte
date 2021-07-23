@@ -8,7 +8,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide themeOverride="gruvbox">
+<Slide themeOverride="minimalist">
     <SlideHeader 
         onBackClicked={() => gotoSlide('map')}
         title="Programming & CompSci."

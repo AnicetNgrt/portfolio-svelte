@@ -188,7 +188,7 @@ font-family: 'Roboto', sans-serif;
 .gruvbox-dark {
     --cbg: rgb(31, 33, 36);
     --cfaint: rgb(40, 40, 40);
-    --ccontrast: rgb(10, 11, 12);
+    --ccontrast: rgb(168, 153, 132);
     --ctext: rgb(168, 153, 132);
     --caccent: rgb(215, 153, 33);
     --caccent-faint: rgb(50, 48, 47);
@@ -239,7 +239,7 @@ font-family: 'Roboto', sans-serif;
     --caccent-shadow: rgba(59, 52, 48, var(--sopac));
 }
 
-.design {
+.minimalist {
     --font: 'Roboto', sans-serif;
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
@@ -252,7 +252,7 @@ font-family: 'Roboto', sans-serif;
     --soffy: 1;
 }
 
-.design-light {
+.minimalist-light {
     --cbg: rgb(255, 255, 255);
     --cfaint: rgb(255, 255, 255);
     --ccontrast: #242749;
@@ -263,7 +263,7 @@ font-family: 'Roboto', sans-serif;
     --caccent-shadow: rgba(197, 209, 212, var(--sopac));
 }
 
-.design-dark {
+.minimalist-dark {
     --cbg: black;
     --cfaint: black;
     --ccontrast: #6b4ca0;
