@@ -1,5 +1,6 @@
 <script lang="ts">
     import { mod } from "../../logic/math";
+import Box from "../atoms/Box.svelte";
 
     import Button from "../atoms/Button.svelte";
     import Separator from "../atoms/Separator.svelte";
@@ -73,14 +74,14 @@
         <Separator size="mi"/>
         <div class="row controls center-y show">
             {#if slides.length > 1}
-                <Button size="sm" leftEmoji="⏮" label="previous" on:click={() => shown = mod(shown-1, slides.length)}/>
+                <Button size="sm" rightEmoji=" " leftEmoji=" " label="⏮" on:click={() => shown = mod(shown-1, slides.length)}/>
                 <Separator size="pi"/>
-                <Button size="sm" rightEmoji="⏭" label="next" on:click={() => shown = mod(shown+1, slides.length)}/>
-                <Separator size="lg"/>
+                <Button size="sm" rightEmoji=" " leftEmoji=" " label="⏭" on:click={() => shown = mod(shown+1, slides.length)}/>
+                <Separator size="md"/>
             {/if}
             <Button size="sm" leftEmoji="❌" label="close" on:click={() => modal = false}/>
             {#if link}
-                <Separator size="lg"/>
+                <Separator size="md"/>
                 <Button round size="sm" label={link.label} href={link.href}/>
             {/if}
         </div>
@@ -143,6 +144,7 @@
 
     .modal .controls {
         width: 80vw;
+        flex-wrap: wrap;
         position: unset;
         background: transparent;
         border: none;
