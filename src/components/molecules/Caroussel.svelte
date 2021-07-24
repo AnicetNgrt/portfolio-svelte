@@ -66,12 +66,10 @@ import Box from "../atoms/Box.svelte";
             {/each}
         </div>
         {#if slides[shown].label && slides[shown].label.length > 0}
-            <Separator size="mi"/>
             <div class="label">
                 <p>{slides[shown].label}</p>
             </div>
         {/if}
-        <Separator size="mi"/>
         <div class="row controls center-y show">
             {#if slides.length > 1}
                 <Button size="sm" rightEmoji=" " leftEmoji=" " label="⏮" on:click={() => shown = mod(shown-1, slides.length)}/>
@@ -110,6 +108,7 @@ import Box from "../atoms/Box.svelte";
         width: 100vw;
         height: 100vh;
         z-index: 10;
+        overflow: auto;
     }
 
     .caroussel {
