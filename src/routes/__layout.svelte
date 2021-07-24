@@ -10,11 +10,11 @@
         unmounted = false;
     });
 
-    const description = "Anicet Nougaret's portfolio. CS Student, game creator, pixelartist. Come and discover my programming projects and artistic works.";
+    const description = "Anicet Nougaret's portfolio. Computer Science student, indie games creator, pixelartist. Come and discover my programming projects and artistic works.";
     const title = "Anicet Nougaret's portfolio.";
     const application_name = "Anicet Nougaret's portfolio.";
     const keywords = "ELIXIR, SVELTE, DEV, FRANCE, PARIS, LYON, INSA, IUT, INFORMATIQUE, JAVASCRIPT, TYPESCRIPT, REACT, NODE, EUROPE, STUDENT"
-    const thumbnail = "/images/thumbnail.jpg";
+    const thumbnail = "anicetnougaret.fr/images/thumbnail.jpg";
 </script>
 
 <svelte:head>
@@ -28,7 +28,11 @@
     <meta property="og:url" content="https://anicetnougaret.fr" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={thumbnail} />
+    <meta property="og:image" content="http://{thumbnail}" />
+    <meta property="og:image:secure_url" content="https://{thumbnail}" /> 
+    <meta property="og:image:type" content="image/jpeg" /> 
+    <meta property="og:image:width" content="710" /> 
+    <meta property="og:image:height" content="527" />
 </svelte:head>
 
 <main class="main-theme light-theme theme-compute" class:unmounted>
