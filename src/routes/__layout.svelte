@@ -11,7 +11,7 @@
     });
 
     const description = "Anicet Nougaret's portfolio. Computer Science student, indie games creator, pixelartist. Come and discover my programming projects and artistic works.";
-    const title = "Anicet Nougaret's portfolio.";
+    const title = "Anicet Nougaret's programming & art portfolio.";
     const application_name = "Anicet Nougaret's portfolio.";
     const keywords = "ELIXIR, SVELTE, DEV, FRANCE, PARIS, LYON, INSA, IUT, INFORMATIQUE, JAVASCRIPT, TYPESCRIPT, REACT, NODE, EUROPE, STUDENT"
     const thumbnail = "anicetnougaret.fr/images/thumbnail.jpg";
