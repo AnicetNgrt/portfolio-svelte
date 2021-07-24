@@ -56,6 +56,21 @@
             <p>💡 Look at this with landscape screen orientation to enlarge the picture even more! 📱🔄</p>
         </div>
         <Separator size="mi"/>
+        <div class="row center-x pictures shown">
+            {#each slides[shown].pictures as { src, widthPerc }, j}
+                <img class="illustration" {src} alt={slides[shown].label} style="width: {widthPerc ?? (100/slides[shown].pictures.length)}%">
+                {#if j < slides[shown].pictures.length-1}
+                    <Separator size="pi"/>
+                {/if}
+            {/each}
+        </div>
+        {#if slides[shown].label && slides[shown].label.length > 0}
+            <Separator size="mi"/>
+            <div class="label">
+                <p>{slides[shown].label}</p>
+            </div>
+        {/if}
+        <Separator size="mi"/>
         <div class="row controls center-y show">
             {#if slides.length > 1}
                 <Button size="sm" leftEmoji="⏮" label="previous" on:click={() => shown = mod(shown-1, slides.length)}/>
@@ -68,19 +83,6 @@
                 <Separator size="lg"/>
                 <Button round size="sm" label={link.label} href={link.href}/>
             {/if}
-        </div>
-        {#if slides[shown].label && slides[shown].label.length > 0}
-            <div class="label">
-                <p>{slides[shown].label}</p>
-            </div>
-        {/if}
-        <div class="row center-x pictures shown">
-            {#each slides[shown].pictures as { src, widthPerc }, j}
-                <img class="illustration" {src} alt={slides[shown].label} style="width: {widthPerc ?? (100/slides[shown].pictures.length)}%">
-                {#if j < slides[shown].pictures.length-1}
-                    <Separator size="pi"/>
-                {/if}
-            {/each}
         </div>
     </div>
 {/if}
@@ -136,11 +138,12 @@
 
     .modal .pictures {
         min-width: 100vw;
+        height: min-content;
     }
 
     .modal .controls {
-        position: unset;
         width: 80vw;
+        position: unset;
         background: transparent;
         border: none;
         box-shadow: none;
@@ -148,7 +151,6 @@
 
     .modal .label {
         position: unset;
-        margin-bottom: var(--pi);
     }
 
     img {
@@ -182,7 +184,7 @@
 
     .label {
         position: absolute;
-        top: calc(calc(30vw + 10vh) - 0.7em);
+        top: calc(calc(30vw + 10vh) - 0.85em);
         border-radius: var(--brad);
         background-color: var(--caccent-faint);
         padding: 0.1em;
