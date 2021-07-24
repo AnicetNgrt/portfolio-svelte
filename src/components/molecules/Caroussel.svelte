@@ -4,7 +4,8 @@
     import Button from "../atoms/Button.svelte";
     import Separator from "../atoms/Separator.svelte";
 
-    export let slides:{ src: string, label?: string, widthPerc?: number }[][] = [];
+    export let slides:{ pictures:{ src: string, widthPerc?: number }[], label?: string }[] = [];
+    export let link: { label: string, href: string } = null;
     
     let shown = 0;
     let modal = false;
@@ -21,11 +22,20 @@
             <Separator size="lg"/>
         {/if}
         <Button size="sm" leftEmoji="🔎" label="enlarge" on:click={() => modal = true}/>
+        {#if link}
+            <Separator size="lg"/>
+            <Button round size="sm" label={link.label} href={link.href}/>
+        {/if}
     </div>
-    {#each slides as pictures, i}
+    {#each slides as { pictures, label }, i}
+        {#if label && label.length > 0 && shown === i}
+            <div class="label">
+                <p>{label}</p>
+            </div>
+        {/if}
         <div
             class="row center-x pictures" class:modal-open={modal} class:shown={shown === i}>
-            {#each pictures as { src, label, widthPerc }, j}
+            {#each pictures as { src, widthPerc }, j}
                 <img
                     on:click={() => modal = true}
                     class="illustration" {src}
@@ -54,11 +64,20 @@
                 <Separator size="lg"/>
             {/if}
             <Button size="sm" leftEmoji="❌" label="close" on:click={() => modal = false}/>
+            {#if link}
+                <Separator size="lg"/>
+                <Button round size="sm" label={link.label} href={link.href}/>
+            {/if}
         </div>
+        {#if slides[shown].label && slides[shown].label.length > 0}
+            <div class="label">
+                <p>{slides[shown].label}</p>
+            </div>
+        {/if}
         <div class="row center-x pictures shown">
-            {#each slides[shown] as { src, label, widthPerc }, j}
-                <img class="illustration" {src} alt={label} style="width: {widthPerc ?? (100/slides[shown].length)}%">
-                {#if j < slides[shown].length-1}
+            {#each slides[shown].pictures as { src, widthPerc }, j}
+                <img class="illustration" {src} alt={slides[shown].label} style="width: {widthPerc ?? (100/slides[shown].pictures.length)}%">
+                {#if j < slides[shown].pictures.length-1}
                     <Separator size="pi"/>
                 {/if}
             {/each}
@@ -92,7 +111,7 @@
 
     .caroussel {
         position: relative;
-        height: calc(calc(30vw + 10vh) + 1em);
+        height: calc(calc(30vw + 10vh) + 3em);
         width: max-content;
         max-width: 100%;
         padding-top: 0.6em;
@@ -127,6 +146,11 @@
         box-shadow: none;
     }
 
+    .modal .label {
+        position: unset;
+        margin-bottom: var(--pi);
+    }
+
     img {
         align-self: flex-start;
         margin-bottom: 0.3em;
@@ -145,7 +169,7 @@
 
     .controls {
         position: absolute;
-        top: calc(calc(30vw + 10vh) - 1.7em);
+        top: calc(calc(30vw + 10vh) + 0.5em);
         border-radius: var(--brad);
         width: max-content;
         justify-content: center;
@@ -154,5 +178,18 @@
         padding-bottom: 0.2em;
         border-bottom: 0;
         transition: opacity 0.2s;
+    }
+
+    .label {
+        position: absolute;
+        top: calc(calc(30vw + 10vh) - 0.7em);
+        border-radius: var(--brad);
+        background-color: var(--caccent-faint);
+        padding: 0.1em;
+    }
+
+    .label p {
+        font-size: var(--mi);
+        color: var(--ccontrast);
     }
 </style>

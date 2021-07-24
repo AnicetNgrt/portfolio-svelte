@@ -22,7 +22,9 @@
                 {#each tabs as { title, subtitle }, i}
                     {#if i === current}
                         <h4>{title}</h4>
-                        <p>{subtitle}</p>
+                        {#if subtitle && subtitle.length > 0}
+                            <p>{subtitle}</p>
+                        {/if}
                     {/if}
                 {/each}
             </div>
@@ -35,7 +37,7 @@
     </div>
     <Separator size="sm"/>
     {#each tabs as { info }, i}
-        {#if i === current}
+        {#if i === current && info && info.length > 0}
             <p class="info">{info}</p>
         {/if}
     {/each}
@@ -50,7 +52,7 @@
     <Button 
         size="sm" 
         on:click={onNext} 
-        label="See another {type}" 
+        label="next {type}" 
     />
 </div>
 
@@ -60,7 +62,7 @@
         width: 100%;
         padding: var(--pi) var(--mi);
         position: sticky;
-        top: calc(-2 * var(--bord));
+        top: calc(-1px - var(--bord));
         z-index: 2;
         border: solid var(--bord) var(--ccontrast);
         border-radius: var(--brad);

@@ -36,7 +36,6 @@
         onBackClicked={() => gotoSlide(prevSlide)}
         title="🎨 Theme editor"
     />
-    <Separator size="md"/>
     <div class="editor-body">
         <div class="row wrap">
             <div class="col">

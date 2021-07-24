@@ -14,7 +14,6 @@
         onBackClicked={() => gotoSlide('map')}
         title="👔 Professional experience"
     />
-    <Separator size="mi"/>
     <div class="col">
         <div class="col">
             <h3 class="highlighted">Fullstack web development</h3>

@@ -3,9 +3,9 @@
     import Slide from '$components/molecules/Slide.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import Portfolio from '../organisms/Portfolio.svelte';
-    import BlogCoddity from './projects/BlogCoddity.svelte';
-    import Homesynck from './projects/Homesynck.svelte';
-    import Sherlocks from './projects/Sherlocks.svelte';
+    import BlogCoddity from './portfolio/BlogCoddity.svelte';
+    import Homesynck from './portfolio/Homesynck.svelte';
+    import Sherlocks from './portfolio/Sherlocks.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
@@ -16,7 +16,6 @@
         onBackClicked={() => gotoSlide('programming')}
         title="🌌 Fullstack dev portfolio"
     />
-    <Separator size="md"/>
     <Portfolio tabs={[
         {
             title: "3W Sherlocks",

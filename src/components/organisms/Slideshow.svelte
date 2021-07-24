@@ -11,7 +11,6 @@
     import Education from "../slides/Education.svelte";
     import WebDevShowreel from "../slides/WebDevShowreel.svelte";
     import DesignAndArt from "../slides/DesignAndArt.svelte";
-    import WebDesignPortfolio from "../slides/WebDesignPortfolio.svelte";
     
     export let slideOverride: string = null;
 
@@ -24,7 +23,6 @@
         themeEditor: { slide: ThemeEditor, props: {} },
         webdevShowreel: { slide: WebDevShowreel, props: {} },
         designAndArt: { slide: DesignAndArt, props: {} },
-        webDesignPortfolio: { slide: WebDesignPortfolio, props: {} }
     };
 
     let slidesContainer: svelte.JSX.Element;

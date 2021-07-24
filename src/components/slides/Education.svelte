@@ -14,7 +14,6 @@
         onBackClicked={() => gotoSlide('map')}
         title="📚 Education"
     />
-    <Separator size="mi"/>
     <div class="col">
         <div class="col">
             <div class="col">

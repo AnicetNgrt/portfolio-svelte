@@ -5,25 +5,31 @@
     import Box from '$components/atoms/Box.svelte';
 import SlideHeader from '../molecules/SlideHeader.svelte';
 import Separator from '../atoms/Separator.svelte';
+import Cards from '../organisms/Cards.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
 </script>
 
-<Slide themeOverride="map-theme">
+<Slide>
     <SlideHeader 
         onBackClicked={() => gotoSlide('main')}
-        title="🗺"
+        title="Discover my world 🌍"
     />
-    <div class="row center-x">
-        <h1>La carte</h1>
-    </div>
-    <Separator size="sm"/>
-    <div class="col center-x wrap cards">
+    <Cards>
         <Card 
             title="Programming & CompSci."
             abstract="Student with professional experience. Proficient with both web backend and frontend. Most proficient with React, Svelte, Elixir, JS, TS, Java, Docker & Python."
             on:click={() => gotoSlide('programming')}
+        />
+        <Card
+            title="Design & Art"
+            abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
+            on:click={() => gotoSlide('designAndArt')}
+        />
+        <Card
+            title="Game Creation" wip disabled
+            abstract="My main hobby. Trying a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
         />
         <div class="col">
             <div class="col">
@@ -48,36 +54,5 @@ import Separator from '../atoms/Separator.svelte';
                 />
             </div>
         </div>
-        <Card
-            title="Design & Art"
-            abstract="Most proficient with minimalist, brutalist and flat design. Professional experience with web design and UI/UX. Using mostly simple techniques and tools."
-            on:click={() => gotoSlide('designAndArt')}
-        />
-        <Card
-            title="Game Creation" wip disabled
-            abstract="My main hobby. Trying a bit of everything but mostly Pixel art, gameplay programming and game design. Many game jams. Godot Engine is great."
-        />
-    </div>
+    </Cards>
 </Slide>
-
-<style>
-    .cards {
-        height: 30ch;
-        max-height: 100%;
-        width: 68ch;
-        max-width: 100%;
-    }
-
-    @media (max-width: 170ch) {
-        .cards {
-            width: 35ch;
-            height: max-content;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .cards {
-            justify-content: center;
-        }
-    }
-</style>

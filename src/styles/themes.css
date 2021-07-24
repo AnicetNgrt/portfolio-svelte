@@ -172,58 +172,25 @@ font-family: 'Roboto', sans-serif;
     --caccent-shadow: rgba(12, 12, 13, var(--sopac));
 }
 
-.gruvbox {
-    --font: 'Roboto', sans-serif;
-    --title-font: 'Rubik', sans-serif;
-    --title-weight: 500;
-
-    --br: 0.5;
-    --ssmth: 15px;
-    --sopac: 0.3;
-    --bthic: 0;
-    --soffx: 0;
-    --soffy: 0.75;
-}
-
-.gruvbox-dark {
-    --cbg: rgb(31, 33, 36);
-    --cfaint: rgb(40, 40, 40);
-    --ccontrast: rgb(168, 153, 132);
-    --ctext: rgb(168, 153, 132);
-    --caccent: rgb(215, 153, 33);
-    --caccent-faint: rgb(50, 48, 47);
-    --ccontrast-shadow: rgba(13, 14, 15, var(--sopac));
-    --caccent-shadow: rgba(13, 14, 15, var(--sopac));
-}
-
-.gruvbox-light {
-    --cbg: rgb(242, 229, 188);
-    --cfaint: rgb(249, 245, 215);
-    --ccontrast: rgb(168, 153, 132);
-    --ctext: rgb(80, 73, 69);
-    --caccent: rgb(13, 14, 15);
-    --caccent-faint: rgb(251, 241, 199);
-    --ccontrast-shadow: rgba(168, 153, 132, var(--sopac));
-    --caccent-shadow: rgba(168, 153, 132, var(--sopac));
-}
-
 .map-theme  {
     --font: 'Roboto', sans-serif;
     --title-font: 'Playfair Display', serif;
 
     --br: 0;
-    --ssmth: 10px;
-    --sopac: 0.1;
-    --bthic: 0.1;
+    --ssmth: 2px;
+    --sopac: 0;
+    --bthic: 1;
+    --soffx: -0.5;
+    --soffy: 0.5;
 }
 
 .map-theme-light {
     --cbg: rgb(240, 192, 120);
-    --cfaint: rgb(255, 218, 148);
-    --ccontrast: rgb(31, 32, 46);
-    --ctext: rgb(31, 32, 46);
+    --cfaint: rgb(255, 208, 138);
+    --ccontrast: rgb(114, 59, 52);
+    --ctext: rgb(114, 59, 52);
     --caccent: rgb(255, 76, 52);
-    --caccent-faint: rgb(255, 218, 148);
+    --caccent-faint: rgb(255, 208, 138);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(59, 52, 48, var(--sopac));
 } 
@@ -231,8 +198,8 @@ font-family: 'Roboto', sans-serif;
 .map-theme-dark  {
     --cbg: rgb(0,43,54);
     --cfaint: rgb(7,54,66);
-    --ccontrast: rgb(166, 168, 135);
-    --ctext: rgb(248, 230, 179);
+    --ccontrast: rgb(218, 183, 151);
+    --ctext: rgb(218, 183, 151);
     --caccent: rgb(112, 202, 235);
     --caccent-faint: rgb(7,54,66);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
@@ -244,21 +211,21 @@ font-family: 'Roboto', sans-serif;
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
 
-    --br: 0;
-    --ssmth: 0px;
-    --sopac: 0;
-    --bthic: 1;
-    --soffx: 0;
+    --br: 1.5;
+    --ssmth: 20px;
+    --sopac: 1;
+    --bthic: 0;
+    --soffx: -1;
     --soffy: 1;
 }
 
 .minimalist-light {
-    --cbg: rgb(255, 255, 255);
-    --cfaint: rgb(255, 255, 255);
+    --cbg: rgb(228, 255, 246);
+    --cfaint: rgb(228, 255, 246);
     --ccontrast: #242749;
     --ctext: #242749;
     --caccent: rgb(36, 39, 73);
-    --caccent-faint: rgb(255, 255, 255);
+    --caccent-faint: rgb(228, 255, 246);
     --ccontrast-shadow: rgba(197, 209, 212, var(--sopac));
     --caccent-shadow: rgba(197, 209, 212, var(--sopac));
 }
@@ -270,6 +237,6 @@ font-family: 'Roboto', sans-serif;
     --ctext: #6b4ca0;
     --caccent: #6b4ca0;
     --caccent-faint: black;
-    --ccontrast-shadow: rgba(10, 11, 22, var(--sopac));
-    --caccent-shadow: rgba(10, 11, 22, var(--sopac));
+    --ccontrast-shadow: rgba(30, 22, 44, var(--sopac));
+    --caccent-shadow: rgba(30, 22, 44, var(--sopac));
 }

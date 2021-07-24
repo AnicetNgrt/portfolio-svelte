@@ -19,6 +19,7 @@
         <h4>{title}</h4>
     </div>
 </div>
+<Separator size="md"/>
 
 <style>
     .header {

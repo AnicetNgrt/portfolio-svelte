@@ -13,7 +13,6 @@
         onBackClicked={() => gotoSlide('map')}
         title="Programming & CompSci."
     />
-    <Separator size="sm"/>
     <div class="cards-container row center-x">
         <div class="row center-x wrap cards">
             <Card
@@ -24,14 +23,6 @@
             <Card
                 title="🎲 Gamedev showreel" wip disabled
                 abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
-            />
-            <Card
-                title="👔 Professional Experience"
-                on:click={() => gotoSlide('professionalXp')}
-            />
-            <Card
-                title="🎓 Education"
-                on:click={() => gotoSlide('education')}
             />
             <Card
                 title="🐙 Browse my repositories"
@@ -51,11 +42,11 @@
     }
 
     .cards {
-        width: 69ch;
+        width: 70ch;
         max-width: 100%;
     }
 
-    @media (max-width: 170ch) {
+    @media (max-width: 80ch) {
         .cards {
             width: 35ch;
         }

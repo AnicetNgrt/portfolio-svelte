@@ -1,61 +1,27 @@
 <script lang="ts">
     import Slide from '$components/molecules/Slide.svelte';
-    import Separator from '$components/atoms/Separator.svelte';
-    import Card from '$components/organisms/Card.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
+    import Portfolio from '../organisms/Portfolio.svelte';
+    import Art from './portfolio/Art.svelte';
+    import WebDesign from './portfolio/WebDesign.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
 </script>
 
-<Slide themeOverride="gruvbox">
+<Slide url="design-and-art-portfolio" themeOverride="map-theme">
     <SlideHeader 
         onBackClicked={() => gotoSlide('map')}
         title="Design & Art"
     />
-    <Separator size="sm"/>
-    <div class="cards-container row center-x">
-        <div class="row center-x wrap cards">
-            <Card
-                title="🌌 Fullstack dev portfolio"
-                abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
-                on:click={() => gotoSlide('webDesignPortfolio')}
-            />
-            <Card
-                title="🎲 Gamedev showreel" wip disabled
-                abstract='Video game programming is how I started to code. I mainly work on gameplay, but I also mess around with making tools and networking. Many completed projects playable now.'
-            />
-            <Card
-                title="📷 Art Instagram account"
-                href="https://www.instagram.com/anicetnougaret/"
-            />
-            <Card
-                title="🐤 Art Twitter account"
-                href="https://twitter.com/AniC_dev"
-            />
-        </div>
-    </div>
+    <Portfolio type="topic" tabs={[
+        {
+            title: "Web design & branding",
+            body: WebDesign
+        },
+        {
+            title: "Graphic Art",
+            body: Art
+        }
+    ]}/>
 </Slide>
-
-<style>
-    .cards-container {
-        width: 100%;
-    }
-
-    .cards {
-        width: 69ch;
-        max-width: 100%;
-    }
-
-    @media (max-width: 170ch) {
-        .cards {
-            width: 35ch;
-        }
-    }
-
-    @media (max-width: 700px) {
-        .cards {
-            justify-content: center;
-        }
-    }
-</style>
