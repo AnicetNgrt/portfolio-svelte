@@ -21,10 +21,14 @@
     <meta name="application-name" content={application_name}/>
     <meta name="keywords" content={keywords}/>
     <title>{title}</title>
-    <meta name="og:title" content={title}/>
     <meta name="description" content={description}/>
-    <meta name="og:description" content={description}/>
-    <meta property="og:image" content={thumbnail}/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AniC_dev" />
+    <meta name="twitter:creator" content="@AniC_dev" />
+    <meta property="og:url" content="https://anicetnougaret.fr" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={thumbnail} />
 </svelte:head>
 
 <main class="main-theme light-theme theme-compute" class:unmounted>
