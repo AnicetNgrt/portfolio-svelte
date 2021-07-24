@@ -9,17 +9,22 @@
     onMount(() => {
         unmounted = false;
     });
+
+    const description = "Anicet Nougaret's portfolio. CS Student, game creator, pixelartist. Come and discover my programming projects and artistic works.";
+    const title = "Anicet Nougaret's portfolio.";
+    const application_name = "Anicet Nougaret's portfolio.";
+    const keywords = "ELIXIR, SVELTE, DEV, FRANCE, PARIS, LYON, INSA, IUT, INFORMATIQUE, JAVASCRIPT, TYPESCRIPT, REACT, NODE, EUROPE, STUDENT"
+    const thumbnail = "/images/thumbnail.jpg";
 </script>
 
 <svelte:head>
-    <meta name="application-name" content="Anicet Nougaret's portfolio."/>
-    <meta
-        name="keywords"
-        content="ELIXIR, SVELTE, DEV, FRANCE, PARIS, LYON, INSA, IUT, INFORMATIQUE, JAVASCRIPT, TYPESCRIPT, REACT, NODE, EUROPE, STUDENT"
-    />
-    <title>Anicet Nougaret</title>
-    <meta name="description" content="Anicet Nougaret's portfolio. CS Student, game creator, pixelartist."/>
-    <meta property="og:image" content="/images/thumbnail.jpg"/>
+    <meta name="application-name" content={application_name}/>
+    <meta name="keywords" content={keywords}/>
+    <title>{title}</title>
+    <meta name="og:title" content={title}/>
+    <meta name="description" content={description}/>
+    <meta name="og:description" content={description}/>
+    <meta property="og:image" content={thumbnail}/>
 </svelte:head>
 
 <main class="main-theme light-theme theme-compute" class:unmounted>
