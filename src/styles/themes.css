@@ -233,10 +233,10 @@ font-family: 'Roboto', sans-serif;
 .minimalist-dark {
     --cbg: black;
     --cfaint: black;
-    --ccontrast: #6b4ca0;
-    --ctext: #6b4ca0;
-    --caccent: #6b4ca0;
+    --ccontrast: #a2c4ac;
+    --ctext: #a2c4ac;
+    --caccent: #a2c4ac;
     --caccent-faint: black;
-    --ccontrast-shadow: rgba(30, 22, 44, var(--sopac));
-    --caccent-shadow: rgba(30, 22, 44, var(--sopac));
+    --ccontrast-shadow: rgba(14, 19, 15, var(--sopac));
+    --caccent-shadow: rgba(14, 19, 15, var(--sopac));
 }
