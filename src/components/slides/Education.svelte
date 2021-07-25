@@ -51,7 +51,7 @@
                         </p>
                         <Separator size="sm"/>
                         <div class="row">
-                            <Button size="sm" label="About page" leftEmoji="🔎" round href="https://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/dut-informatique" relExternal/>
+                            <Button size="sm" label="Check it out" leftEmoji="🔎" round href="https://homesynck.anicetnougaret.fr/" relExternal/>
                             <Separator size="sm"/>
                             <Button size="sm" label="Git repository" leftEmoji="🐙" round href="https://github.com/Homesynck" relExternal/>
                         </div>
