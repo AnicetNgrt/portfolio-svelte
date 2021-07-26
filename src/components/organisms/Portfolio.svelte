@@ -67,6 +67,8 @@
         border: solid var(--bord) var(--ccontrast);
         border-radius: var(--brad);
         box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     .sticky .row {

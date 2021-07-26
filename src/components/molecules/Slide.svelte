@@ -19,7 +19,7 @@
 
 {#if loaded}
 <div class="{themeOverride} {themeOverride}-{$theme} theme-compute col" id="root">
-    <div id="siteName" class="row center-y">
+    <div id="theme-switch" class="row center-y">
         <Separator size="xl"/>
         {#if $theme === 'dark'}
             <Button size="sm" rightEmoji="🌞" round accent on:click={() => updateTheme('light')}/>
@@ -36,7 +36,7 @@
 {/if}
 
 <style>
-    #siteName {
+    #theme-switch {
         position: fixed;
         font-weight: normal;
         width: max-content;
@@ -51,7 +51,7 @@
         border-bottom: 0;
         border-left: 0;
         border-top-right-radius: var(--brad);
-        z-index: 10;
+        z-index: 20;
     }
 
     #root {
@@ -75,6 +75,7 @@
         margin: var(--sm);
         border: solid var(--bord) var(--ccontrast);
         overflow: auto;
+        box-shadow: inset var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 
     #content {
