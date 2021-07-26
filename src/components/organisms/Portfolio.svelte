@@ -54,6 +54,14 @@
         on:click={onNext} 
         label="next {type}" 
     />
+    <Separator size="giga"/>
+    <Separator size="giga"/>
+    <Separator size="giga"/>
+    <Separator size="giga"/>
+    <Separator size="giga"/>
+    <Separator size="giga"/>
+    <p>Hi, I'm Mr Bottom Padding. I'm happy to contribute to a subtle CSS trick to make the top header stick to the top border. (●'◡'●)</p>
+    <Separator size="md"/>
 </div>
 
 <style>
