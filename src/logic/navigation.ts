@@ -4,11 +4,12 @@ export type Navigation = {
 }
 
 export const initNavigation = (): Navigation => {
-    const storedNavigation = localStorage.getItem('navigation');
+    // const storedNavigation = localStorage.getItem('navigation');
 
-    return storedNavigation ? 
-        JSON.parse(storedNavigation) :
-        { slideName: 'main', prevSlide: null };
+    // return storedNavigation ? 
+    //     JSON.parse(storedNavigation) :
+    //     { slideName: 'main', prevSlide: null };
+    return { slideName: 'main', prevSlide: null };
 }
 
 export const updateNavigation = (navigation: Navigation): void => {

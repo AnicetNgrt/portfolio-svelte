@@ -188,7 +188,7 @@ import Box from "../atoms/Box.svelte";
         top: calc(calc(30vw + 10vh) - 0.85em);
         border-radius: var(--brad);
         background-color: var(--caccent-faint);
-        padding: 0.1em;
+        padding: 0.1em 0.2em;
     }
 
     .label p {

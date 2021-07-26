@@ -29,7 +29,7 @@
     --caccent-shadow: rgba(12, 12, 13, var(--sopac));
 }
 
-.map-theme  {
+.artdeco  {
     --font: 'Roboto', sans-serif;
     --title-font: 'Playfair Display', serif;
 
@@ -41,7 +41,7 @@
     --soffy: 1;
 }
 
-.map-theme-light {
+.artdeco-light {
     --cbg: #e4eee4;
     --cfaint: #f1faee;
     --ccontrast: rgb(44, 29, 87);
@@ -52,7 +52,7 @@
     --caccent-shadow: rgba(230, 57, 70, var(--sopac));
 } 
 
-.map-theme-dark  {
+.artdeco-dark  {
     --cbg: rgb(0,43,54);
     --cfaint: rgb(7,54,66);
     --ccontrast: rgb(218, 183, 151);

@@ -13,8 +13,8 @@
 
 <Slide url="fullstackdev-portfolio" themeOverride="minimalist">
     <SlideHeader 
-        onBackClicked={() => gotoSlide('programming')}
-        title="🌌 Fullstack dev portfolio"
+        onBackClicked={() => gotoSlide('map')}
+        title="💻 Fullstack dev portfolio"
     />
     <Portfolio tabs={[
         {

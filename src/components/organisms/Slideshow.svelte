@@ -10,7 +10,8 @@
     import { cubicInOut } from 'svelte/easing';
     import Education from "../slides/Education.svelte";
     import WebDevShowreel from "../slides/WebDevShowreel.svelte";
-    import DesignAndArt from "../slides/DesignAndArt.svelte";
+    import WebDesignShowreel from "../slides/WebDesignShowreel.svelte";
+import ArtGallery from "../slides/ArtGallery.svelte";
     
     export let slideOverride: string = null;
 
@@ -22,7 +23,8 @@
         map: { slide: MapSlide, props: {} },
         themeEditor: { slide: ThemeEditor, props: {} },
         webdevShowreel: { slide: WebDevShowreel, props: {} },
-        designAndArt: { slide: DesignAndArt, props: {} },
+        webdesignShowreel: { slide: WebDesignShowreel, props: {} },
+        artGallery: { slide: ArtGallery, props: {} }
     };
 
     let slidesContainer: svelte.JSX.Element;

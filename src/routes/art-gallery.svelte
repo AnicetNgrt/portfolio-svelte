@@ -2,4 +2,4 @@
     import Slideshow from "$components/organisms/Slideshow.svelte";
 </script>
 
-<Slideshow slideOverride="designAndArt"/>
+<Slideshow slideOverride="artGallery"/>
