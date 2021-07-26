@@ -1,7 +1,7 @@
 <script lang="ts">
     import Separator from '$components/atoms/Separator.svelte';
     import Slide from '$components/molecules/Slide.svelte';
-    import Caroussel from '../molecules/Caroussel.svelte';
+    import Caroussel from '../organisms/Caroussel.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
 
     export let gotoSlide: (slide) => void;

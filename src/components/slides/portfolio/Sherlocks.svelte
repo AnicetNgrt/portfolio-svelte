@@ -1,7 +1,7 @@
 <script lang="ts">
     import Separator from '../../atoms/Separator.svelte';
     import Button from '../../atoms/Button.svelte';
-    import Caroussel from '../../molecules/Caroussel.svelte';
+    import Caroussel from '../../organisms/Caroussel.svelte';
     import Box from '../../atoms/Box.svelte';
 </script>
 
