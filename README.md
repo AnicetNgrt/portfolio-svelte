@@ -11,4 +11,5 @@ Run `npm install` & `npm run dev`. Open `localhost:3000`.
 ## Licence
 
 Code : MIT
+
 Assets (pictures, art, screenshots...) : All rights reserved Anicet Nougaret @ 2021
