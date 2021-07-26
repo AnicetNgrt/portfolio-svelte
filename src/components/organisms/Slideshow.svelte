@@ -1,7 +1,6 @@
 <script lang="ts">
     import MainSlide from "$components/slides/MainSlide.svelte";
     import ProfessionalXpSlide from "$components/slides/ProfessionalXpSlide.svelte";
-    import ProgrammingSlide from "$components/slides/ProgrammingSlide.svelte";
     import MapSlide from "$components/slides/MapSlide.svelte";
     import ThemeEditor from "$components/slides/ThemeEditor.svelte";
     import { initNavigation, updateNavigation } from "../../logic/navigation";
@@ -11,7 +10,7 @@
     import Education from "../slides/Education.svelte";
     import WebDevShowreel from "../slides/WebDevShowreel.svelte";
     import WebDesignShowreel from "../slides/WebDesignShowreel.svelte";
-import ArtGallery from "../slides/ArtGallery.svelte";
+    import ArtGallery from "../slides/ArtGallery.svelte";
     
     export let slideOverride: string = null;
 
@@ -19,7 +18,6 @@ import ArtGallery from "../slides/ArtGallery.svelte";
         main: { slide: MainSlide, props: {} },
         professionalXp: { slide: ProfessionalXpSlide, props: {} },
         education: { slide: Education, props: {} },
-        programming: { slide: ProgrammingSlide, props: {} },
         map: { slide: MapSlide, props: {} },
         themeEditor: { slide: ThemeEditor, props: {} },
         webdevShowreel: { slide: WebDevShowreel, props: {} },

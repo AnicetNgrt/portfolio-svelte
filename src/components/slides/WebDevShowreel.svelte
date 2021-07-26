@@ -11,7 +11,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="fullstackdev-portfolio" themeOverride="minimalist">
+<Slide url="fullstackdev-portfolio">
     <SlideHeader 
         onBackClicked={() => gotoSlide('map')}
         title="💻 Fullstack dev portfolio"

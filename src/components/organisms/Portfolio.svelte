@@ -60,7 +60,12 @@
     <Separator size="giga"/>
     <Separator size="giga"/>
     <Separator size="giga"/>
-    <p>Hi, I'm Mr Bottom Padding. I'm happy to contribute to a subtle CSS trick to make the top header stick to the top border. (●'◡'●)</p>
+    <div>
+        <p>Hi, I'm Mr. Padding. I'm happy to contribute to a subtle CSS trick that sticks the header to the top.</p>
+        <p>To everyone whom discovered me I wish an amazing day!</p>
+        <Separator size="pi"/>
+        <p>\ (●'◡'●) </p>
+    </div>
     <Separator size="md"/>
 </div>
 

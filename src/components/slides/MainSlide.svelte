@@ -76,10 +76,6 @@
     } */
 
     @media(max-width: 700px) {
-        .myname {
-            font-size: var(--mega);
-        }
-
         /* #pp {
             width: 5em;
             height: 5em;

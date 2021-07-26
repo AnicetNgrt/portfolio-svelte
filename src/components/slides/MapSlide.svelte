@@ -1,6 +1,7 @@
 <script lang="ts">
     import Slide from '$components/molecules/Slide.svelte';
     import Card from '$components/organisms/Card.svelte';
+import Separator from '../atoms/Separator.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import Cards from '../organisms/Cards.svelte';
 
@@ -54,4 +55,5 @@
             />
         </div>
     </Cards>
+    <Separator size="md"/>
 </Slide>
