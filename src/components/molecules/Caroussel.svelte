@@ -65,11 +65,6 @@ import Box from "../atoms/Box.svelte";
                 {/if}
             {/each}
         </div>
-        {#if slides[shown].label && slides[shown].label.length > 0}
-            <div class="label">
-                <p>{slides[shown].label}</p>
-            </div>
-        {/if}
         <div class="row controls center-y show">
             {#if slides.length > 1}
                 <Button size="sm" rightEmoji=" " leftEmoji=" " label="⏮" on:click={() => shown = mod(shown-1, slides.length)}/>
@@ -83,6 +78,11 @@ import Box from "../atoms/Box.svelte";
                 <Button round size="sm" label={link.label} href={link.href}/>
             {/if}
         </div>
+        {#if slides[shown].label && slides[shown].label.length > 0}
+            <div class="label">
+                <p>{slides[shown].label}</p>
+            </div>
+        {/if}
     </div>
 {/if}
 
