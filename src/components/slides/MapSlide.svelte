@@ -1,17 +1,14 @@
 <script lang="ts">
-    import Button from '$components/atoms/Button.svelte';
     import Slide from '$components/molecules/Slide.svelte';
     import Card from '$components/organisms/Card.svelte';
-    import Box from '$components/atoms/Box.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
-    import Separator from '../atoms/Separator.svelte';
     import Cards from '../organisms/Cards.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
 </script>
 
-<Slide>
+<Slide url="map">
     <SlideHeader 
         onBackClicked={() => gotoSlide('main')}
         title="Discover my world 🌍"
