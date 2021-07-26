@@ -48,8 +48,9 @@
                 on:click={() => gotoSlide('themeEditor')}
             />
             <Card
-                small wip disabled
+                small
                 title="Source code"
+                href="https://github.com/AnicetNgrt/portfolio-svelte"
             />
         </div>
     </Cards>
