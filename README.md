@@ -7,3 +7,8 @@ If you have any technical question, please feel free to ask or even open an issu
 ## Install and run in dev
 
 Run `npm install` & `npm run dev`. Open `localhost:3000`.
+
+## Licence
+
+Code : MIT
+Assets (pictures, art, screenshots...) : All rights reserved Anicet Nougaret @ 2021
