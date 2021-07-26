@@ -70,7 +70,7 @@
         width: 100%;
         padding: var(--pi) var(--mi);
         position: sticky;
-        top: calc(-1 * var(--bord));
+        top: -1px;
         z-index: 2;
         border: solid var(--bord) var(--ccontrast);
         border-radius: var(--brad);
