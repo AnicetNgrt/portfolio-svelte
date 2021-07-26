@@ -1,153 +1,10 @@
-/* TEST FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800&family=Inter:wght@200;400;600;800&family=Jost:wght@200;300;400;500;600;700&family=Open+Sans+Condensed:wght@300;700&family=Playfair+Display:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-/*
-font-family: 'Fira Mono', monospace;
-font-family: 'Fira Sans', sans-serif;
-font-family: 'Inter', sans-serif;
-font-family: 'Jost', sans-serif;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Roboto', sans-serif;
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
-.main-theme {
+.theme {
     --font: 'Inter', sans-serif;
     --title-font: 'Inter', sans-serif;
-    --title-weight: bold;
-
-    --br: 0.2;
-    --ssmth: 0px;
-    --sopac: 1;
-    --bthic: 2;
-    --soffy: 1;
-    --soffx: -0.7;
-    --trans: 0.7;
-
-    --global-size: 49px;
-
-    --pi-fact: 0.2;
-    --mi-fact: 0.3;
-    --sm-fact: 0.4;
-    --md-fact: 0.56;
-    --lg-fact: 0.75;
-    --xl-fact: 1;
-    --xxl-fact: 1.5;
-    --mega-fact: 1.7;
-    --giga-fact: 2.4;
-}
-
-@media (max-width: 3900px) {
-    .main-theme {
-        --global-size: 128px;
-    }
-}
-
-@media (max-width: 3400px) {
-    .main-theme {
-        --global-size: 120px;
-    }
-}
-
-@media (max-width: 3000px) {
-    .main-theme {
-        --global-size: 100px;
-    }
-}
-
-@media (max-width: 2500px) {
-    .main-theme {
-        --global-size: 75px;
-    }
-}
-
-@media (max-width: 2000px) {
-    .main-theme {
-        --global-size: 58px;
-    }
-}
-
-@media (max-width: 1700px) {
-    .main-theme {
-        --global-size: 54px;
-    }
-}
-
-@media (max-width: 1500px) {
-    .main-theme {
-        --global-size: 48px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .main-theme {
-        --global-size: 45px;
-    }
-}
-
-@media (max-width: 800px) {
-    .main-theme {
-        --global-size: 38.5px;
-    }
-}
-
-@media (max-width: 500px) {
-    .main-theme {
-        --global-size: 32.5px;
-    }
-}
-
-@media (max-width: 400px) {
-    .main-theme {
-        --global-size: 30px;
-    }
-}
-
-@media (max-width: 370px) {
-    .main-theme {
-        --global-size: 27px;
-    }
-}
-
-@media (max-width: 350px) {
-    .main-theme {
-        --global-size: 25px;
-    }
-}
-
-@media (max-width: 320px) {
-    .main-theme {
-        --global-size: 21px;
-    }
-}
-
-@media (max-width: 250px) {
-    .main-theme {
-        --global-size: 18px;
-    }
-}
-
-.theme-compute {
-    --pi: calc(var(--pi-fact) * var(--global-size));
-    --mi: calc(var(--mi-fact) * var(--global-size));
-    --sm: calc(var(--sm-fact) * var(--global-size));
-    --md: calc(var(--md-fact) * var(--global-size));
-    --lg: calc(var(--lg-fact) * var(--global-size));
-    --xl: calc(var(--xl-fact) * var(--global-size));
-    --xxl: calc(var(--xxl-fact) * var(--global-size));
-    --mega: calc(var(--mega-fact) * var(--global-size));
-    --giga: calc(var(--giga-fact) * var(--global-size));
-
-    --padd: 0.4em;
-    --marg: 0.4em;
-    --bord: calc(var(--bthic) * calc(0.025 * var(--global-size)));
-    --brad: calc(var(--br) * 0.25em);
-    --shad-offx: calc(var(--soffx) * 0.2em);
-    --shad-offy: calc(var(--soffy) * 0.2em);
-    --shad-offx-large: calc(var(--soffx) * 0.3em); 
-    --shad-offy-large: calc(var(--soffy) * 0.3em);
 }
 
 .theme-light {
@@ -176,23 +33,23 @@ font-family: 'Roboto', sans-serif;
     --font: 'Roboto', sans-serif;
     --title-font: 'Playfair Display', serif;
 
-    --br: 0;
-    --ssmth: 2px;
-    --sopac: 0;
+    --br: 5;
+    --ssmth: 0px;
+    --sopac: 0.4;
     --bthic: 1;
-    --soffx: -0.5;
-    --soffy: 0.5;
+    --soffx: 0;
+    --soffy: 1;
 }
 
 .map-theme-light {
-    --cbg: rgb(240, 192, 120);
-    --cfaint: rgb(255, 208, 138);
-    --ccontrast: rgb(114, 59, 52);
-    --ctext: rgb(114, 59, 52);
-    --caccent: rgb(255, 76, 52);
-    --caccent-faint: rgb(255, 208, 138);
-    --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
-    --caccent-shadow: rgba(59, 52, 48, var(--sopac));
+    --cbg: #e4eee4;
+    --cfaint: #f1faee;
+    --ccontrast: rgb(44, 29, 87);
+    --ctext: rgb(44, 29, 87);
+    --caccent: rgb(230, 57, 70);
+    --caccent-faint: #f1faee;
+    --ccontrast-shadow: rgba(69, 123, 157, var(--sopac));
+    --caccent-shadow: rgba(230, 57, 70, var(--sopac));
 } 
 
 .map-theme-dark  {
@@ -203,7 +60,7 @@ font-family: 'Roboto', sans-serif;
     --caccent: rgb(112, 202, 235);
     --caccent-faint: rgb(7,54,66);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
-    --caccent-shadow: rgba(59, 52, 48, var(--sopac));
+    --caccent-shadow: rgba(112, 202, 235, var(--sopac));
 }
 
 .minimalist {
@@ -231,12 +88,12 @@ font-family: 'Roboto', sans-serif;
 }
 
 .minimalist-dark {
-    --cbg: black;
-    --cfaint: black;
+    --cbg: #242749;
+    --cfaint: #242749;
     --ccontrast: #a2c4ac;
     --ctext: #a2c4ac;
     --caccent: #a2c4ac;
-    --caccent-faint: black;
-    --ccontrast-shadow: rgba(14, 19, 15, var(--sopac));
-    --caccent-shadow: rgba(14, 19, 15, var(--sopac));
+    --caccent-faint: #242749;
+    --ccontrast-shadow: rgba(31, 26, 56, var(--sopac));
+    --caccent-shadow: rgba(31, 26, 56, var(--sopac));
 }

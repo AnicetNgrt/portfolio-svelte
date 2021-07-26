@@ -104,7 +104,7 @@ import Box from "../atoms/Box.svelte";
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(122, 123, 133, 0.938);
+        background-color: var(--cbg);
         width: 100vw;
         height: 100vh;
         z-index: 10;
