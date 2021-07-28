@@ -63,7 +63,7 @@
         border-bottom: 0;
         border-top-right-radius: 2em;
         border-top-left-radius: 2em;
-        z-index: 20;
+        z-index: 10;
         box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 
