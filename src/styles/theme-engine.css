@@ -108,9 +108,21 @@
     }
 }
 
+@media (max-width: 280px) {
+    .main-theme {
+        --global-size: 19px;
+    }
+}
+
 @media (max-width: 250px) {
     .main-theme {
         --global-size: 18px;
+    }
+}
+
+@media (max-width: 220px) {
+    .main-theme {
+        --global-size: 16px;
     }
 }
 
