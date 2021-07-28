@@ -1,8 +1,8 @@
 <script lang="ts">
-    import Separator from '$components/atoms/Separator.svelte';
     import Slide from '$components/molecules/Slide.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import Portfolio from '../organisms/Portfolio.svelte';
+    import BlogCodd from './portfolio/BlogCodd.md';
     import BlogCoddity from './portfolio/BlogCoddity.svelte';
     import Homesynck from './portfolio/Homesynck.svelte';
     import Sherlocks from './portfolio/Sherlocks.svelte';
@@ -27,7 +27,7 @@
             title: "Coddity Blog",
             subtitle: "📮 Jamstack in all its glory",
             info: '05/20 (2 weeks) :: team of 2 :: [SvelteKit, Typescript]',
-            body: BlogCoddity
+            body: BlogCodd
         },
         {
             title: "Homesynck",

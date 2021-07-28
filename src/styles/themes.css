@@ -31,34 +31,34 @@
 
 .artdeco  {
     --font: 'Roboto', sans-serif;
-    --title-font: 'Playfair Display', serif;
+    --title-font: 'Open Sans Condensed', serif;
 
-    --br: 5;
+    --br: 0.5;
     --ssmth: 0px;
-    --sopac: 0.4;
+    --sopac: 0.2;
     --bthic: 1;
     --soffx: 0;
     --soffy: 1;
 }
 
 .artdeco-light {
-    --cbg: #e4eee4;
-    --cfaint: #f1faee;
-    --ccontrast: rgb(44, 29, 87);
-    --ctext: rgb(44, 29, 87);
-    --caccent: rgb(230, 57, 70);
-    --caccent-faint: #f1faee;
-    --ccontrast-shadow: rgba(69, 123, 157, var(--sopac));
-    --caccent-shadow: rgba(230, 57, 70, var(--sopac));
+    --cbg: rgb(200, 206, 211);
+    --cfaint: rgb(214, 224, 228);
+    --ccontrast: rgb(75, 32, 64);
+    --ctext: rgb(75, 32, 64);
+    --caccent: rgb(177, 31, 140);
+    --caccent-faint: rgb(214, 224, 228);
+    --ccontrast-shadow: rgba(95, 97, 105, var(--sopac));
+    --caccent-shadow: rgba(177, 31, 140, var(--sopac));
 } 
 
 .artdeco-dark  {
-    --cbg: rgb(0,43,54);
-    --cfaint: rgb(7,54,66);
-    --ccontrast: rgb(218, 183, 151);
-    --ctext: rgb(218, 183, 151);
+    --cbg: rgb(36, 50, 59);
+    --cfaint: rgb(46, 56, 65);
+    --ccontrast: rgb(192, 173, 155);
+    --ctext: rgb(192, 173, 155);
     --caccent: rgb(112, 202, 235);
-    --caccent-faint: rgb(7,54,66);
+    --caccent-faint: rgb(52, 62, 68);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(112, 202, 235, var(--sopac));
 }
@@ -68,23 +68,23 @@
     --title-font: 'Rubik', sans-serif;
     --title-weight: 500;
 
-    --br: 1.5;
-    --ssmth: 20px;
+    --br: 5;
+    --ssmth: 15px;
     --sopac: 1;
     --bthic: 0;
-    --soffx: -1;
+    --soffx: -0.5;
     --soffy: 1;
 }
 
 .minimalist-light {
-    --cbg: rgb(228, 255, 246);
-    --cfaint: rgb(228, 255, 246);
+    --cbg: rgb(255, 251, 228);
+    --cfaint: rgb(255, 251, 228);
     --ccontrast: #242749;
     --ctext: #242749;
     --caccent: rgb(36, 39, 73);
-    --caccent-faint: rgb(228, 255, 246);
-    --ccontrast-shadow: rgba(197, 209, 212, var(--sopac));
-    --caccent-shadow: rgba(197, 209, 212, var(--sopac));
+    --caccent-faint: rgb(255, 251, 228);
+    --ccontrast-shadow: rgba(231, 221, 205, var(--sopac));
+    --caccent-shadow: rgba(231, 221, 205, var(--sopac));
 }
 
 .minimalist-dark {

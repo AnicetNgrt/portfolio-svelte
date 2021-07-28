@@ -45,7 +45,7 @@ import Separator from '../atoms/Separator.svelte';
         <div class="row">
             <Card
                 small
-                title="Theme Editor"
+                title="Theme editor"
                 on:click={() => gotoSlide('themeEditor')}
             />
             <Card
