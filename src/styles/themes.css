@@ -70,10 +70,10 @@
 
     --br: 5;
     --ssmth: 15px;
-    --sopac: 1;
+    --sopac: 0.75;
     --bthic: 0;
-    --soffx: -0.5;
-    --soffy: 1;
+    --soffx: -1;
+    --soffy: 0.5;
 }
 
 .minimalist-light {
@@ -81,10 +81,10 @@
     --cfaint: rgb(255, 251, 228);
     --ccontrast: #242749;
     --ctext: #242749;
-    --caccent: rgb(36, 39, 73);
+    --caccent: rgb(163, 79, 68);
     --caccent-faint: rgb(255, 251, 228);
-    --ccontrast-shadow: rgba(231, 221, 205, var(--sopac));
-    --caccent-shadow: rgba(231, 221, 205, var(--sopac));
+    --ccontrast-shadow: rgba(168, 164, 137, var(--sopac));
+    --caccent-shadow: rgba(168, 164, 137, var(--sopac));
 }
 
 .minimalist-dark {
@@ -92,8 +92,8 @@
     --cfaint: #242749;
     --ccontrast: #a2c4ac;
     --ctext: #a2c4ac;
-    --caccent: #a2c4ac;
+    --caccent: rgb(51, 154, 180);
     --caccent-faint: #242749;
-    --ccontrast-shadow: rgba(31, 26, 56, var(--sopac));
-    --caccent-shadow: rgba(31, 26, 56, var(--sopac));
+    --ccontrast-shadow: rgba(12, 13, 29, var(--sopac));
+    --caccent-shadow: rgba(12, 13, 29, var(--sopac));
 }
