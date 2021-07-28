@@ -9,7 +9,7 @@ import Separator from '../atoms/Separator.svelte';
     export const prevSlide = {};
 </script>
 
-<Slide url="map">
+<Slide url="map" {gotoSlide}>
     <SlideHeader 
         onBackClicked={() => gotoSlide('main')}
         title="Discover my world 🌍"

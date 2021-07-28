@@ -10,7 +10,7 @@
     const nextSlide = 'map';
 </script>
 
-<Slide>
+<Slide {gotoSlide}>
     <header class="row center-y header">
         <!-- <img id="pp" alt="me" src="https://avatars.githubusercontent.com/u/31180613?v=4"/> -->
         <div class="col">

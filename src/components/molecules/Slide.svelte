@@ -4,7 +4,9 @@
     import { onMount } from 'svelte';
     import Button from '../atoms/Button.svelte';
     import Separator from '../atoms/Separator.svelte';
+    import { menu } from '../../logic/menu';
 
+    export let gotoSlide: (slide) => void;
     export let themeOverride: string = 'theme';
     export let url:string = '/';
 
@@ -20,12 +22,21 @@
 {#if loaded}
 <div class="{themeOverride} {themeOverride}-{$theme} theme-compute col" id="root">
     <div id="theme-switch" class="row center-y">
-        <Separator size="xl"/>
         {#if $theme === 'dark'}
             <Button size="sm" rightEmoji="🌞" round accent on:click={() => updateTheme('light')}/>
         {:else}
-            <Button size="sm" rightEmoji="🌚" round accent on:click={() => updateTheme('dark')}/>
+            <Button size="sm" rightEmoji="🌑" round accent on:click={() => updateTheme('dark')}/>
         {/if}
+        <Separator size="mi"/>
+        {#if $menu.open}
+            <Button size="sm" label="Contact" leftEmoji="📮" href="mailto:anicet.nougaret@etu.u-paris.fr"/>
+            <Separator size="mi"/>
+            <Button size="sm" label="Home" leftEmoji="🏠" on:click={() => gotoSlide('main')}/>
+            <Separator size="mi"/>
+            <Button size="sm" label="Discover" leftEmoji="🌍" on:click={() => gotoSlide('map')}/>
+            <Separator size="mi"/>
+        {/if}
+        <Button size="sm" round accent leftEmoji={$menu.open ? "✖" : "☰"} on:click={() => menu.update(m => ({ ...m, open: !m.open }))}/>
     </div>
     <div class="col center-x" id="frame">
         <div class="col" id="content">
@@ -43,15 +54,17 @@
         height: max-content;
         font-size: 1vw;
         top: calc(100% - calc(0.8 * var(--mega)));
-        left: calc(-0.6 * var(--mega));
+        left: 50%;
+        transform: translateX(-50%);
         transform-origin: 0%;
         background-color: var(--cbg);
-        padding: var(--pi) var(--mi);
+        padding: var(--mi) var(--mi);
         border: solid var(--bord) var(--ccontrast);
         border-bottom: 0;
-        border-left: 0;
-        border-top-right-radius: var(--brad);
+        border-top-right-radius: 2em;
+        border-top-left-radius: 2em;
         z-index: 20;
+        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
     }
 
     #root {

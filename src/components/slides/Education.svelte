@@ -9,7 +9,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="education">
+<Slide url="education" {gotoSlide}>
     <SlideHeader
         onBackClicked={() => gotoSlide('map')}
         title="📚 Education"

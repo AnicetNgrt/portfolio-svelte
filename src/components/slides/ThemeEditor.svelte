@@ -31,7 +31,7 @@
     let font = "'Jost', sans-serif";
 </script>
 
-<Slide>
+<Slide {gotoSlide}>
     <SlideHeader 
         onBackClicked={() => gotoSlide(prevSlide)}
         title="🎨 Theme editor"
