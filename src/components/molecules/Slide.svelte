@@ -114,7 +114,7 @@
         #content {
             justify-content: flex-start;
             padding: var(--sm) var(--md);
-            padding-bottom: var(--xl);
+            padding-bottom: var(--giga);
         }
     }
 </style>
