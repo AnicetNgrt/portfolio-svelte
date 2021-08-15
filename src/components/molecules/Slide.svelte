@@ -80,10 +80,8 @@
     #frame {
         position: relative;
         font-size: var(--md);
-        min-height: calc(100vh - calc(2 * var(--sm)));
-        height: 100%;
+        height: calc(100vh - calc(2 * var(--sm)));
         width: calc(100vw - calc(2 * var(--sm)));
-        max-width: 100%;
         padding: 0 var(--lg);
         margin: var(--sm);
         border: solid var(--bord) var(--ccontrast);
@@ -105,12 +103,18 @@
 
     @media (max-width: 700px) {
         #frame {
-            justify-content: start; 
+            justify-content: start;
+            border: none;
+            box-shadow: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
         }
 
         #content {
             justify-content: flex-start;
-            padding: var(--sm) var(--pi);
+            padding: var(--sm) var(--md);
+            padding-bottom: var(--xl);
         }
     }
 </style>

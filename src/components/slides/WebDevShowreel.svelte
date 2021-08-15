@@ -3,7 +3,6 @@
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import Portfolio from '../organisms/Portfolio.svelte';
     import BlogCodd from './portfolio/BlogCodd.md';
-    import BlogCoddity from './portfolio/BlogCoddity.svelte';
     import Homesynck from './portfolio/Homesynck.svelte';
     import Sherlocks from './portfolio/Sherlocks.svelte';
 

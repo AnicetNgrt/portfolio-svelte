@@ -13,7 +13,7 @@
     --ccontrast: black;
     --ctext: black;
     --caccent: rgb(0, 0, 0);
-    --caccent-faint: rgb(135, 253, 174);
+    --caccent-faint: rgb(107, 240, 151);
     --ccontrast-shadow: rgba(0, 0, 0, var(--sopac));
     --caccent-shadow: rgba(0, 0, 0, var(--sopac));
 }

@@ -181,6 +181,7 @@ import Box from "../atoms/Box.svelte";
         padding-bottom: 0.2em;
         border-bottom: 0;
         transition: opacity 0.2s;
+        z-index: 1;
     }
 
     .label {

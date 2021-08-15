@@ -8,7 +8,7 @@
     export const prevSlide = {};
 </script>
 
-<Slide url="webdesign-portfolio" themeOverride="minimalist" {gotoSlide}>
+<Slide url="webdesign-portfolio" {gotoSlide}>
     <SlideHeader 
         onBackClicked={() => gotoSlide('map')}
         title="🎴 Web design portfolio"
