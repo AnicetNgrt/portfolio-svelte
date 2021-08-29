@@ -1,9 +1,9 @@
 <script lang="ts">
     import Slide from '$components/molecules/Slide.svelte';
     import Card from '$components/organisms/Card.svelte';
-import Separator from '../atoms/Separator.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import Cards from '../organisms/Cards.svelte';
+    import Separator from '../atoms/Separator.svelte';
 
     export let gotoSlide: (slide) => void;
     export const prevSlide = {};
@@ -25,7 +25,7 @@ import Separator from '../atoms/Separator.svelte';
         />
         <Card
             title="💻 Fullstack dev portfolio"
-            abstract='From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI.'
+            abstract="From frontend with Svelte and React, backend with Node.js, Java and Elixir, to devOps with Docker. I love to solve difficult problems, share my knowledge and build beautiful UI."
             on:click={() => gotoSlide('webdevShowreel')}
         />
         <Card

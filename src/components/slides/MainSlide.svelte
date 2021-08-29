@@ -11,8 +11,8 @@
 </script>
 
 <Slide {gotoSlide}>
-    <header class="row center-y header">
-        <!-- <img id="pp" alt="me" src="https://avatars.githubusercontent.com/u/31180613?v=4"/> -->
+    <header class="row center-y wrap header">
+        <img id="pp" alt="me" src="https://avatars.githubusercontent.com/u/31180613?v=4"/>
         <div class="col">
             <h1 class="myname">Anicet</h1>
             <h1 class="myname">Nougaret</h1>
@@ -64,22 +64,27 @@
         margin-top: calc(var(--lg) / -1);
     }
 
-    /* #pp {
+    #pp {
         font-size: var(--md);
-        width: 7.2em;
-        height: 7.2em;
+        width: 7.5em;
+        height: 7.5em;
         object-fit: cover;
         border-radius: 6em;
         margin: var(--marg) var(--sm);
         margin-left: 0;
         border: solid var(--bord) var(--ccontrast);
-    } */
+        box-shadow: var(--shad-offx) var(--shad-offy) var(--ssmth) var(--ccontrast-shadow);
+    }
 
     @media(max-width: 700px) {
-        /* #pp {
-            width: 5em;
-            height: 5em;
-        } */
+        #pp {
+            width: 5.5em;
+            height: 5.5em;
+        }
+
+        .myname {
+            font-size: var(--mega); 
+        }
 
         .myname:not(:first-child) {
             margin-top: -0.275em;
