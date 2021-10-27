@@ -42,7 +42,7 @@
             <Button size="md" label="Documentation" leftEmoji="📚" href="https://homesynck.github.io/homesynck-server/"/>
         </Box>
         <Box size="sm" margin>
-            <Button size="md" label="Report PDF" leftEmoji="📃" href="/homesynck/report.pdf" relExternal/>
+            <Button size="md" label="Report PDF" leftEmoji="📃" href="/homesynck/PjS4_09.pdf" relExternal/>
         </Box>
     </div>
 </div>
