@@ -45,7 +45,7 @@
             <Button size="md" label="Itch.io" leftEmoji="💾" round href="https://anicetngrt.itch.io/"/>
         </Box>
         <Box size="sm" margin>
-            <Button size="md" label="Email" leftEmoji="📮" round href="mailto:anicet.nougaret@etu.u-paris.fr"/>
+            <Button size="md" label="Email" leftEmoji="📮" round href="mailto:anicet.nougaret@insa-lyon.fr"/>
         </Box>
     </div>
 </Slide>
