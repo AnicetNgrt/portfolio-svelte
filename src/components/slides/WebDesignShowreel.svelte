@@ -4,11 +4,11 @@
     import Caroussel from '../organisms/Caroussel.svelte';
     import SlideHeader from '../molecules/SlideHeader.svelte';
 
-    export let gotoSlide: (slide) => void;
+    export let gotoSlide: (slide: string) => void;
     export const prevSlide = {};
 </script>
 
-<Slide url="webdesign-portfolio" {gotoSlide}>
+<Slide {gotoSlide}>
     <SlideHeader 
         onBackClicked={() => gotoSlide('map')}
         title="🎴 Web design portfolio"

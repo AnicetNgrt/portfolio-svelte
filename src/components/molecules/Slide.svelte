@@ -6,16 +6,14 @@
     import Separator from '../atoms/Separator.svelte';
     import { menu } from '../../logic/menu';
 
-    export let gotoSlide: (slide) => void;
+    export let gotoSlide: (slide: string) => void;
     export let themeOverride: string = 'theme';
-    export let url:string = '/';
 
     let loaded = false;
 
     onMount(() => {
         initTheme();
         loaded = true;
-        window.history.pushState({}, '', url);
     });
 </script>
 

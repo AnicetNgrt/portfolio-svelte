@@ -4,7 +4,7 @@
     import Box from '$components/atoms/Box.svelte';
     import Slide from '$components/molecules/Slide.svelte';
 
-    export let gotoSlide: (slide) => void;
+    export let gotoSlide: (slide: string) => void;
     export const prevSlide = {};
 
     const nextSlide = 'map';

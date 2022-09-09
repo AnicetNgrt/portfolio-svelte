@@ -3,11 +3,11 @@
     import Button from '$components/atoms/Button.svelte';
     import { mod } from '../../logic/math';
 
-    export let tabs = [];
+    export let tabs: any[] = [];
     export let type:string = 'project';
     let current = 0;
     
-    let portfolio;
+    let portfolio: HTMLDivElement;
 
     const onNext = () => {
         current = mod(current + 1, tabs.length);

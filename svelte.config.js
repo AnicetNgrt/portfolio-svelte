@@ -1,4 +1,3 @@
-import { resolve } from 'path';
 import node from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
 import { markdown } from 'svelte-preprocess-markdown';
@@ -12,19 +11,7 @@ const config = {
     extensions: ['.svelte','.md'],
 
     kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-		adapter: node(),
-        vite: {
-            resolve: {
-                alias: {
-                    $components: resolve('./src/components'),
-                    $logic: resolve('./src/logic'),
-                    $styles: resolve('./src/styles'),
-                    $types: resolve('./src/types.ts'),
-                }
-            }
-        }
+		adapter: node()
 	}
 };
 

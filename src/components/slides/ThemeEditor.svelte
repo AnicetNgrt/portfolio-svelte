@@ -6,10 +6,10 @@
     import SlideHeader from '../molecules/SlideHeader.svelte';
     import { theme } from "../../logic/theme";
 
-    export let gotoSlide: (slide) => void;
-    export let prevSlide;
+    export let gotoSlide: (slide: string) => void;
+    export let prevSlide: any;
 
-    const fonts = {
+    const fonts: {[key: string]: string} = {
         'Questrial': "'Questrial', sans-serif",
         'Fira Mono': "'Fira Mono', monospace",
         'Fira Sans': "'Fira Sans', sans-serif",

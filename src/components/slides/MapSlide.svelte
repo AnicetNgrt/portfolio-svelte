@@ -5,11 +5,11 @@
     import Cards from '../organisms/Cards.svelte';
     import Separator from '../atoms/Separator.svelte';
 
-    export let gotoSlide: (slide) => void;
+    export let gotoSlide: (slide: string) => void;
     export const prevSlide = {};
 </script>
 
-<Slide url="map" {gotoSlide}>
+<Slide {gotoSlide}>
     <SlideHeader 
         onBackClicked={() => gotoSlide('main')}
         title="Discover my world 🌍"
