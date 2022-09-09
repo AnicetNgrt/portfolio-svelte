@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:16.4.2
+FROM node:alpine:18
 
 # install dependencies
 WORKDIR /app
